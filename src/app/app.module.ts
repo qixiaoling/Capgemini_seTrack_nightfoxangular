@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ConcertComponent } from './concert/concert.component';
+import {ConcertComponent} from "./concert/concert.component";
 
 @NgModule({
   declarations: [
@@ -17,4 +17,5 @@ import { ConcertComponent } from './concert/concert.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
