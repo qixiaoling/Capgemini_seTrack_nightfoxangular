@@ -3,6 +3,7 @@ import {Concert} from "./concerts";
 //THIS IS THE INTERFACE TYPE
 import {CONCERTS} from "./Mock-concerts";
 import {Observable, of} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 
 
@@ -14,7 +15,7 @@ import {Observable, of} from "rxjs";
 export class ConcertService {
 
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   getConcert(id: number): Observable<Concert>{
     const concert = CONCERTS.find(c => c.id == id)!;
@@ -22,7 +23,7 @@ export class ConcertService {
   }
 
   getConcerts(): Observable<Concert[]> {
-    const concerts = of(CONCERTS);
+    const concerts = this.httpClient.get<Concert[]>('http://localhost:8082/concert/getall');
     return concerts;
   }
 
