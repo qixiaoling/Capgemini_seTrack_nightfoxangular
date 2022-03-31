@@ -16,7 +16,10 @@ export class ConcertService {
 
   constructor(private httpClient: HttpClient) { }
 
-
+  getConcert(id: Number): Observable<Concert>{
+    const concert = this.httpClient.get<Concert>( 'http://localhost:8082/concert/getbyconcertid/' + id.toString());
+    return concert;
+  }
 
   getConcerts(): Observable<Concert[]> {
     const concerts = this.httpClient.get<Concert[]>('http://localhost:8082/concert/getall');
