@@ -11,7 +11,11 @@
       <p class="card-title">{{concert.artist.bandName}}</p>
       <p>{{concert.time}}</p>
       <p>{{concert.concertHall.city}}</p>
-      <button class="btn-smaller">details</button>
+      <button class="btn-smaller">
+        <a routerLink="/concert-detail/{{concert.id}}">
+          details
+        </a>
+      </button>
     </div>
   </div>
 </div>
