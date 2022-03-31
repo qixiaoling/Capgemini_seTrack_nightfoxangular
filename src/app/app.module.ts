@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ConcertDetailComponent } from './concert-detail/concert-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     ConcertComponent,
     SearchbarComponent,
-    HomeComponent
+    HomeComponent,
+    ConcertDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,11 @@
+import {Artist} from "./artist";
+import {Concerthall} from "./concerthall";
+
 export interface Concert {
   id: number,
   price: number,
   description: String,
   time: Date,
-  artist: String,
-  concertHall: String
+  artist: Artist,
+  concertHall: Concerthall
 }

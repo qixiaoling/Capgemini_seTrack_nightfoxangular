@@ -1,0 +1,42 @@
+.card-section-container {
+  width: 100vw;
+  height:92vh;
+  background: url('../../Assets/Images/home-page-background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card-section-title {
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
+}
+.logan {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFC812;
+
+
+}
+.btn {
+  background-color: #000;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.25rem;
+  transition: all 0.3s linear;
+  border: none;
+
+}
+.btn:hover {
+  transform: scale(1.1);
+
+}
+.btn a {
+  text-decoration: none;
+  color: #FAB23D;
+}

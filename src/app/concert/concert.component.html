@@ -1,7 +1,18 @@
-<ul class="heroes">
-  <li *ngFor="let concert of concerts">
-    <button>
-      <span class="badge">{{concert.id}}</span> {{concert.time}}
-    </button>
-  </li>
-</ul>
+
+<div class='card-section-container'>
+  <div class='card-section-title'>
+    <span class='logan'>UPCOMING CONCERTS </span>
+  </div>
+
+
+  <div class="concerts-info-container">
+    <div *ngFor="let concert of concerts" class="concert-card">
+
+      <p class="card-title">{{concert.artist.bandName}}</p>
+      <p>{{concert.time}}</p>
+      <p>{{concert.concertHall.city}}</p>
+      <button class="btn-smaller">details</button>
+    </div>
+  </div>
+</div>
+
