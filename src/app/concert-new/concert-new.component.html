@@ -30,9 +30,14 @@
           <label >
             Description*
             <br/>
-            <input #concertFef="ngModel" required type='text' name="Description" ngModel/>
-            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">
-              Please enter Description
+            <input #concertRef="ngModel" minlength="5" required type='text' name="Description" ngModel/>
+            <div *ngIf="concertRef.errors && (concertRef.dirty || concertRef.touched)"  class="alert alert-danger">
+              <div [hidden]="!concertRef.errors?.['required']">
+                Please enter description
+              </div>
+              <div [hidden]=" !concertRef.errors?.['minlength']">
+                Please enter at least 5 characters
+              </div>
             </div>
           </label>
 
