@@ -1,0 +1,108 @@
+<section class='contact-section'>
+  <div class='contact-content'>
+    <div class='contact-title-container'>
+      <h2>Contact Us</h2>
+    </div>
+    <div class='contact-body'>
+      <div class='contact-body-left'>
+        <div class='contact-declaration'>
+          <p class='text-larger'>Thank you for your interest in Smart Flow Consulting.
+            Please fill out the form below to ask a
+            question or report a technical problem.
+          </p>
+          <p class='text-small'>
+            Please note: while we appreciate your questions,
+            we are unable to respond to all inquiries.
+          </p>
+          <p class='text-small'>
+            Required fields are marked with an asterisk (*).
+          </p>
+        </div>
+        <form onSubmit={sendEmail}>
+
+          <label htmlFor="firstName">
+            FIRST NAME *
+            <br/>
+            <input
+              type='text'
+              id='firstName'
+
+            />
+          </label>
+          <label for="lastName">
+            LAST NAME *
+            <br/>
+            <input
+              type='text'
+              id='lastName'
+
+            />
+          </label>
+
+
+          <label htmlFor="user_email">
+            EMAIL *
+            <br/>
+            <input
+              name='user_email'
+            />
+          </label>
+
+
+          <label htmlFor="organisation">
+            COMPANY OR SCHOOL
+            <br/>
+            <input
+              type='text'
+              name='organisation'
+            />
+          </label>
+          <label htmlFor="subject">
+            SUBJECT *
+            <br/>
+            <input
+              type='text'
+              id='subject'
+              value={state.subject}
+              onChange={handleChange}
+              name='subject'
+            />
+          </label>
+
+
+          <label htmlFor="comments">
+            MESSAGE *
+            <br/>
+            <textarea
+              id='comments'
+              rows='4'
+              name='comments'
+            >
+            </textarea>
+
+          </label>
+
+          <input type='submit' value='Submit' class='contact-submit'/>
+
+        </form>
+      </div>
+      <div class='contact-body-right'>
+        <div class='contact-article'>
+          <p class='text-bold'>MEDIA INQUIRIES</p>
+          <p class='text-small'>Visit our to find contact details for
+            our media relations team in your region.</p>
+        </div>
+        <div class='contact-article'>
+          <p class='text-bold'>REPRINTS</p>
+          <p class='text-small'>To request permission to republish an article, or if you have any
+            questions about the usage of content
+            published by Smart Flow Consulting visit our page.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>

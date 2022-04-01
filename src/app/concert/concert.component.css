@@ -22,7 +22,7 @@
 }
 .concerts-info-container{
   width: 65%;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2rem;
@@ -72,6 +72,8 @@ card-title {
 .card-container p {
   margin-bottom: 0.85em;
 }
+
+
 .btn-smaller {
   background-color: #FFC812;
   font-weight: 700;
@@ -88,4 +90,24 @@ card-title {
 .btn-smaller a {
   text-decoration: none;
   color: #000;
+}
+
+.btn-add {
+  background-color: #FAB23D;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.25rem;
+  transition: all 0.3s linear;
+  border: none;
+  margin-bottom: 3rem;
+
+}
+.btn-add:hover {
+  transform: scale(1.1);
+
+}
+.btn-add a {
+  text-decoration: none;
+  color: #262626;
 }
