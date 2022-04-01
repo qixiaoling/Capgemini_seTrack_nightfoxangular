@@ -50,7 +50,12 @@ label {
   font-weight: 700;
   margin: 1.5rem 0;
 }
-label > input  {
+label > input {
+  padding: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.drop-down-select{
   padding: 1rem;
   width: 100%;
   margin-top: 0.5rem;
