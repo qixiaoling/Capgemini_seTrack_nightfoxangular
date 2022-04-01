@@ -16,19 +16,28 @@
 <!--              Please enter artist name-->
 <!--            </div>-->
 <!--          </label>-->
+<!--          <label for="artist">Artist</label>-->
+<!--          <select id="artist" name="artist" [(ngModel)]="ArtistId" class="drop-down-select">-->
+<!--            <option value="1">REX ORANGE COUNTY	</option>-->
+<!--            <option value="2" selected>SIMPLE MINDS	</option>-->
+<!--            <option value="3">THE ROLLING STONES</option>-->
+<!--            <option value="4">DAVE</option>-->
+<!--          </select>-->
+
           <label for="artist">Artist</label>
           <select id="artist" name="artist" ngModel class="drop-down-select">
-            <option value="1">REX ORANGE COUNTY	</option>
-            <option value="2">SIMPLE MINDS	</option>
-            <option value="3">THE ROLLING STONES</option>
-            <option value="4">DAVE</option>
+            <option *ngFor = "let artist of artists" [value]="artist.id">
+              {{artist.bandName}}
+            </option>
+
           </select>
 
+
           <label for="concert-hall">Concert Hall</label>
-          <select id="concert-hall" name="concert-hall" ngModel class="drop-down-select" >
+          <select id="concert-hall" name="concert-hall" [(ngModel)]="ConcertHallId"  class="drop-down-select" >
             <option value="1">Ahoy</option>
             <option value="2">Johan Cruijff ArenA</option>
-            <option value="3">AFAS Live</option>
+            <option value="3" selected>AFAS Live</option>
             <option value="4">Koninklijk Theater Carré</option>
             <option value="5">Ziggo Dome</option>
           </select>
