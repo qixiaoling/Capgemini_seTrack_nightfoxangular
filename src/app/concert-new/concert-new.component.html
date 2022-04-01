@@ -20,48 +20,38 @@
           <label>
             Concert Halls*
             <br/>
-            <input
-              type='text'
-              id='lastName'
-              name="Concert halls"
-              ngModel
-            />
+            <input #concertFef="ngModel" required type='text' name="Concert halls" ngModel/>
+            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">
+              Please enter Concert hall choice
+            </div>
           </label>
 
 
-          <label htmlFor="user_email">
+          <label >
             Description*
             <br/>
-            <input
-              type='text'
-              name="Description"
-              ngModel
-
-            />
+            <input #concertFef="ngModel" required type='text' name="Description" ngModel/>
+            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">
+              Please enter Description
+            </div>
           </label>
 
-
-          <label htmlFor="organisation">
+          <label >
             Ticket Price
             <br/>
-            <input
-              type='text'
-              name="Ticket Price"
-              ngModel
-
-            />
+            <input #concertFef="ngModel" required type='text' name="Ticket Price" ngModel/>
+            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">
+              Please enter ticket price
+            </div>
           </label>
-          <label htmlFor="subject">
+          <label>
             Date *
             <br/>
-            <input
-              type='text'
-              name='subject'
-              ngModel
-            />
+            <input  #concertFef="ngModel" required type='text' name='subject' ngModel/>
+            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">
+              Please enter concert date
+            </div>
           </label>
-
-
           <input type='submit' value='Submit' class='btn'/>
 
         </form>
