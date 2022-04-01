@@ -11,13 +11,8 @@
           <label htmlFor="firstName">
             Artist *
             <br/>
-            <input
-              type='text'
-              id='firstName'
-              name="artist"
-              ngModel
-
-            />
+            <input #concertFef required type='text' name="artist" ngModel/>
+            <b>{{concertFef.className}}</b>
           </label>
           <label for="lastName">
             Concert Halls*
