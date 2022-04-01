@@ -6,7 +6,7 @@
     <div class='contact-body'>
       <div class='contact-body-left'>
 
-        <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)">
+        <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
 
           <label>
             Artist *
@@ -57,7 +57,9 @@
               Please enter concert date
             </div>
           </label>
-          <input type='submit' value='Submit' class='btn'/>
+          <button [disabled]="!concertForm.form.valid"  type='submit' class='btn'>
+            Submit
+          </button>
 
         </form>
       </div>

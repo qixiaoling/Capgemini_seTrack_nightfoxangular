@@ -94,6 +94,13 @@ label > textarea  {
   transform: scale(1.1);
 
 }
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 @media (min-width: 880px) {
   .contact-body {
     width: 100%;
