@@ -8,13 +8,16 @@
 
         <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)">
 
-          <label htmlFor="firstName">
+          <label>
             Artist *
             <br/>
-            <input #concertFef required type='text' name="artist" ngModel/>
-            <b>{{concertFef.className}}</b>
+            <input #concertFef="ngModel" required type='text' name="artist" ngModel/>
+            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">
+              Please enter artist name
+            </div>
           </label>
-          <label for="lastName">
+
+          <label>
             Concert Halls*
             <br/>
             <input
@@ -22,8 +25,6 @@
               id='lastName'
               name="Concert halls"
               ngModel
-
-
             />
           </label>
 
