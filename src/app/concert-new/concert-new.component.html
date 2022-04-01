@@ -32,15 +32,22 @@
 
           </select>
 
-
           <label for="concert-hall">Concert Hall</label>
-          <select id="concert-hall" name="concert-hall" [(ngModel)]="ConcertHallId"  class="drop-down-select" >
-            <option value="1">Ahoy</option>
-            <option value="2">Johan Cruijff ArenA</option>
-            <option value="3" selected>AFAS Live</option>
-            <option value="4">Koninklijk Theater Carré</option>
-            <option value="5">Ziggo Dome</option>
+          <select id="concert-hall" name="concert-hall" ngModel  class="drop-down-select" >
+            <option *ngFor="let concertHall of concertHalls" [value]="concertHall.id">
+              {{concertHall.hallName}}
+            </option>
+
           </select>
+
+<!--          <label for="concert-hall">Concert Hall</label>-->
+<!--          <select id="concert-hall" name="concert-hall" [(ngModel)]="ConcertHallId"  class="drop-down-select" >-->
+<!--            <option value="1">Ahoy</option>-->
+<!--            <option value="2">Johan Cruijff ArenA</option>-->
+<!--            <option value="3" selected>AFAS Live</option>-->
+<!--            <option value="4">Koninklijk Theater Carré</option>-->
+<!--            <option value="5">Ziggo Dome</option>-->
+<!--          </select>-->
 
           <label >
             Description*

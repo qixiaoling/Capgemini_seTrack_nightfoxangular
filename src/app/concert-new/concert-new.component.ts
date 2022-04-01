@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistService} from "../artist.service";
 import {Artist} from "../artist";
+import {ConcertHallService} from "../concert-hall.service";
+import {Concerthall} from "../concerthall";
 
 @Component({
   selector: 'app-concert-new',
@@ -11,10 +13,13 @@ import {Artist} from "../artist";
 })
 export class ConcertNewComponent implements OnInit {
   artists: Artist[] = [];
-  constructor(private artistService : ArtistService) { }
+  concertHalls: Concerthall[] = [];
+  constructor(private artistService : ArtistService,
+              private concertHallService: ConcertHallService) { }
 
   ngOnInit(): void {
     this.getArtists();
+    this.getConcertHalls();
   }
 
   getArtists():void{
@@ -22,6 +27,13 @@ export class ConcertNewComponent implements OnInit {
       .subscribe(x => {
         console.log(x);
         this.artists = x;
+      })
+  }
+  getConcertHalls():void{
+    this.concertHallService.getConcertHalls()
+      .subscribe(x=>{
+        console.log(x);
+        this.concertHalls = x;
       })
   }
 
