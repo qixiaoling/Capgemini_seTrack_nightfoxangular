@@ -45,9 +45,9 @@ form {
 }
 label {
   width: 100%;
-  font-size: 0.65rem;
+  font-size: 1rem;
   text-transform: capitalize;
-  font-weight: var(--fw-bold);
+  font-weight: 700;
   margin: 1.5rem 0;
 }
 label > input  {
