@@ -1,11 +1,13 @@
 .contact-section {
+  font-family: 'Montserrat', sans-serif;
   width: 100vw;
   margin: 0 auto;
   border-bottom: 1px solid #000;
+  background: #FAB23D;
 }
 .contact-content {
   width: 90%;
-  margin: 2.5rem auto;
+  margin: 0 auto;
   text-align: left;
 }
 .contact-title-container {
@@ -32,7 +34,7 @@
 }
 .text-bold {
   font-size: 0.875rem;
-  font-weight: var(--fw-bold);
+  font-weight: 700;
   margin: 2rem 0 2rem 0;
 }
 form {
