@@ -11,6 +11,7 @@ export class ConcertComponent implements OnInit {
 
   concerts: Concert[] = [];
 
+
   constructor(private concertService: ConcertService) { }
 
   ngOnInit(): void {

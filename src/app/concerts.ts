@@ -5,7 +5,7 @@ export interface Concert {
   id: number,
   price: number,
   description: String,
-  time: Date,
+  time: String,
   artist: Artist,
   concertHall: Concerthall
 }

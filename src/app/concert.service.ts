@@ -3,6 +3,7 @@ import {Concert} from "./concerts";
 
 import {Observable, of} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {ConcertObj} from "./concertObj";
 
 
 
@@ -31,7 +32,7 @@ export class ConcertService {
 
   addConcert(concert: Concert): Observable<Concert> {
     console.log(concert);
-    return this.httpClient.post<Concert>('http://localhost:8082/concert/addconcert/'+concert.artist + '/' + concert.concertHall, concert, this.httpOptions)
+    return this.httpClient.post<Concert>('http://localhost:8082/concert/addconcert'+ '/' + concert.artist + '/' + concert.concertHall, concert, this.httpOptions)
       .pipe(
         // catchError(this.handleError<Hero[]>('getHeroes', []))
       )

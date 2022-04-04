@@ -14,4 +14,9 @@ export class ArtistService {
     const artists = this.httpClient.get<Artist[]>('http://localhost:8082/artist/getall');
     return artists;
   }
+
+  getArtist(id: Number): Observable<Artist> {
+    const artist = this.httpClient.get<Artist>('http://localhost:8082/artist/getbyid/'+id.toString());
+    return artist;
+  }
 }
