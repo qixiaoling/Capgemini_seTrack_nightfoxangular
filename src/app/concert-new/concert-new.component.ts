@@ -3,6 +3,8 @@ import { ArtistService} from "../artist.service";
 import {Artist} from "../artist";
 import {ConcertHallService} from "../concert-hall.service";
 import {Concerthall} from "../concerthall";
+import {ConcertService} from "../concert.service";
+import {Concert} from "../concerts";
 
 @Component({
   selector: 'app-concert-new',
@@ -14,8 +16,11 @@ import {Concerthall} from "../concerthall";
 export class ConcertNewComponent implements OnInit {
   artists: Artist[] = [];
   concertHalls: Concerthall[] = [];
+  concert?: Concert;
+
   constructor(private artistService : ArtistService,
-              private concertHallService: ConcertHallService) { }
+              private concertHallService: ConcertHallService,
+              private concertService: ConcertService) { }
 
   ngOnInit(): void {
     this.getArtists();
@@ -38,10 +43,11 @@ export class ConcertNewComponent implements OnInit {
   }
 
 
-  ArtistId = "2";
-  ConcertHallId="3";
-  onSubmit(value:any){
-    console.log(value)
+  onSubmit(value: Concert): void{
+    console.log(value);
+    this.concertService.addConcert(value);
+
+
   }
 
 

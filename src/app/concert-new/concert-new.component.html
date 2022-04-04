@@ -32,8 +32,8 @@
 
           </select>
 
-          <label for="concert-hall">Concert Hall</label>
-          <select id="concert-hall" name="concert-hall" ngModel  class="drop-down-select" >
+          <label for="concertHall">Concert Hall</label>
+          <select id="concertHall" name="concertHall" ngModel  class="drop-down-select" >
             <option *ngFor="let concertHall of concertHalls" [value]="concertHall.id">
               {{concertHall.hallName}}
             </option>
@@ -52,7 +52,7 @@
           <label >
             Description*
             <br/>
-            <input #concertRef="ngModel" minlength="5" required type='text' name="Description" ngModel/>
+            <input #concertRef="ngModel" minlength="5" required type='text' name="description" ngModel/>
             <div *ngIf="concertRef.errors && (concertRef.dirty || concertRef.touched)"  class="alert alert-danger">
               <div [hidden]="!concertRef.errors?.['required']">
                 Please enter description
@@ -66,7 +66,7 @@
           <label >
             Ticket Price
             <br/>
-            <input #concertRef="ngModel" required type='text' name="Ticket Price" ngModel/>
+            <input #concertRef="ngModel" required type='text' name="price" ngModel/>
             <div [hidden]="concertRef.valid || concertRef.pristine"  class="alert alert-danger">
               Please enter ticket price
             </div>
@@ -74,7 +74,7 @@
           <label>
             Date *
             <br/>
-            <input  #concertRef="ngModel" required type='text' name='subject' ngModel/>
+            <input  #concertRef="ngModel" required type='text' name='time' ngModel/>
             <div [hidden]="concertRef.valid || concertRef.pristine"  class="alert alert-danger">
               Please enter concert date
             </div>
