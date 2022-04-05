@@ -31,9 +31,14 @@ export class ConcertService {
   }
 
   addConcert(concert: Concert): Observable<Concert> {
-    console.log(concert);
-    return this.httpClient.post<Concert>('http://localhost:8082/concert/addconcert'+ '/' + concert.artist + '/' + concert.concertHall, concert, this.httpOptions)
+    console.log(JSON.stringify(concert));
+    const concertPayload = {} as Concert;
+    concertPayload.description = concert.description;
+    concertPayload.time = concert.time;
+    concertPayload.price = concert.price;
+    return this.httpClient.post<Concert>('http://localhost:8082/concert/addconcert'+ '/' + concert.artist + '/' + concert.concertHall, concertPayload, this.httpOptions)
       .pipe(
+
         // catchError(this.handleError<Hero[]>('getHeroes', []))
       )
 
