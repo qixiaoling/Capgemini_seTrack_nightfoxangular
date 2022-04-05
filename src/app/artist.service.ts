@@ -32,4 +32,14 @@ export class ArtistService {
       .pipe();
 
   }
+  updateArtist(artist: Artist): Observable<Artist>{
+    console.log(JSON.stringify(artist));
+    const artistPayload = {} as Artist;
+    artistPayload.bandName = artist.bandName;
+    artistPayload.description = artist.description;
+
+    return this.httpClient.put<Artist>('http://localhost:8082/artist/update' + '/' + artist.id, artistPayload, this.httpOptions)
+      .pipe();
+
+  }
 }
