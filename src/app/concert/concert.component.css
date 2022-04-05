@@ -60,7 +60,7 @@
   background: #262626;
   color:#FAB23D;
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 1rem;
   font-family: Montserrat, sans-serif;
 
 
@@ -73,12 +73,17 @@ card-title {
   margin-bottom: 0.85em;
 }
 
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
 
-.btn-smaller {
+.btn-smaller,
+.btn-tiny {
   background-color: #FFC812;
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 0.115rem 0.5rem;
   transition: all 0.3s linear;
   border: none;
   color: #000;
@@ -90,6 +95,17 @@ card-title {
 .btn-smaller a {
   text-decoration: none;
   color: #000;
+}
+.btn-smaller {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.115rem 0.5rem;
+}
+.btn-tiny {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.115rem 0.5rem;
 }
 
 .btn-add {

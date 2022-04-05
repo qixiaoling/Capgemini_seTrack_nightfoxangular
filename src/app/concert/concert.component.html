@@ -11,6 +11,10 @@
       <p class="card-title">{{concert.artist.bandName}}</p>
       <p>{{concert.time}}</p>
       <p>{{concert.concertHall.city}}</p>
+      <div class="btn-wrapper">
+        <button class="btn-tiny">update</button>
+        <button class="btn-tiny">delete</button>
+      </div>
       <button class="btn-smaller">
         <a routerLink="/concert-detail/{{concert.id}}">
           details

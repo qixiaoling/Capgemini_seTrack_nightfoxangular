@@ -15,6 +15,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelect, MatSelectModule} from "@angular/material/select";
+import { ConcertUpdateComponent } from './concert-update/concert-update.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatSelect, MatSelectModule} from "@angular/material/select";
     SearchbarComponent,
     HomeComponent,
     ConcertDetailComponent,
-    ConcertNewComponent
+    ConcertNewComponent,
+    ConcertUpdateComponent
   ],
   imports: [
     BrowserModule,

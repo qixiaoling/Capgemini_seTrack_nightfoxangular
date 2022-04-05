@@ -19,14 +19,7 @@ export class ConcertNewComponent implements OnInit {
   artists: Artist[] = [];
   concertHalls: Concerthall[] = [];
   concerts: Concert[] = [];
-  // concertObj: ConcertObj = {
-  //   price: 0,
-  //   description: "",
-  //   time: Date.prototype
-  // };
-  concert:Concert = {} as Concert;
-  artist : Artist = {} as Artist;
-  concertHall: Concerthall = {} as Concerthall;
+
 
 
   constructor(private artistService : ArtistService,
@@ -45,23 +38,7 @@ export class ConcertNewComponent implements OnInit {
         this.artists = x;
       })
   }
-  getArtist(id:Number){
-    this.artistService.getArtist(id).subscribe(
-      x=>{
-        // console.log(x);
-        this.concert.artist = x;
-        // console.log("I am the artist: "+ JSON.stringify(this.concert.artist) );
-      }
-    )
-  }
-  getConcertHall(id:Number){
-    this.concertHallService.getConcertHall(id).subscribe(
-      x=>{
-        // console.log(x);
-        this.concert.concertHall = x;
-      }
-    )
-  }
+
   getConcertHalls():void{
     this.concertHallService.getConcertHalls()
       .subscribe(x=>{

@@ -24,8 +24,10 @@ export class ConcertDetailComponent implements OnInit {
         console.log(x);
         this.concert = x;
       });
+  }
 
-
+  goBack(): void{
+    this.location.back();
   }
 
 }
