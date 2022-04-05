@@ -1,0 +1,104 @@
+<section class='contact-section'>
+  <div class='contact-content'>
+    <div class='contact-title-container'>
+      <h2>CREATE CONCERT</h2>
+    </div>
+    <div class='contact-body'>
+      <div class='contact-body-left'>
+
+        <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
+
+<!--          <label>-->
+<!--            Artist *-->
+<!--            <br/>-->
+<!--            <input #concertFef="ngModel" required type='text' name="artist" ngModel/>-->
+<!--            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">-->
+<!--              Please enter artist name-->
+<!--            </div>-->
+<!--          </label>-->
+<!--          <label for="artist">Artist</label>-->
+<!--          <select id="artist" name="artist" [(ngModel)]="ArtistId" class="drop-down-select">-->
+<!--            <option value="1">REX ORANGE COUNTY	</option>-->
+<!--            <option value="2" selected>SIMPLE MINDS	</option>-->
+<!--            <option value="3">THE ROLLING STONES</option>-->
+<!--            <option value="4">DAVE</option>-->
+<!--          </select>-->
+
+          <label for="artist">Artist</label>
+          <select id="artist" name="artist" ngModel class="drop-down-select">
+            <option *ngFor = "let artist of artists" [value]="artist.id">
+              {{artist.bandName}}
+            </option>
+
+          </select>
+
+          <label for="concertHall">Concert Hall</label>
+          <select id="concertHall" name="concertHall" ngModel  class="drop-down-select" >
+            <option *ngFor="let concertHall of concertHalls" [value]="concertHall.id">
+              {{concertHall.hallName}}
+            </option>
+
+          </select>
+
+<!--          <label for="concert-hall">Concert Hall</label>-->
+<!--          <select id="concert-hall" name="concert-hall" [(ngModel)]="ConcertHallId"  class="drop-down-select" >-->
+<!--            <option value="1">Ahoy</option>-->
+<!--            <option value="2">Johan Cruijff ArenA</option>-->
+<!--            <option value="3" selected>AFAS Live</option>-->
+<!--            <option value="4">Koninklijk Theater Carré</option>-->
+<!--            <option value="5">Ziggo Dome</option>-->
+<!--          </select>-->
+
+          <label >
+            Description*
+            <br/>
+            <input #concertRef="ngModel" minlength="5" required type='text' name="description" ngModel/>
+            <div *ngIf="concertRef.errors && (concertRef.dirty || concertRef.touched)"  class="alert alert-danger">
+              <div [hidden]="!concertRef.errors?.['required']">
+                Please enter description
+              </div>
+              <div [hidden]=" !concertRef.errors?.['minlength']">
+                Please enter at least 5 characters
+              </div>
+            </div>
+          </label>
+
+          <label >
+            Ticket Price
+            <br/>
+            <input #concertRef="ngModel" required type='text' name="price" ngModel/>
+            <div [hidden]="concertRef.valid || concertRef.pristine"  class="alert alert-danger">
+              Please enter ticket price
+            </div>
+          </label>
+          <label>
+            Date *
+            <br/>
+            <input  #concertRef="ngModel" required type='text' name='time' ngModel/>
+            <div [hidden]="concertRef.valid || concertRef.pristine"  class="alert alert-danger">
+              Please enter concert date
+            </div>
+          </label>
+          <button [disabled]="!concertForm.form.valid"  type='submit' class='btn'>
+            Submit
+          </button>
+
+        </form>
+      </div>
+      <div class='contact-body-right'>
+        <div class='contact-article'>
+          <p class='text-bold'>Artist</p>
+          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
+        </div>
+        <div class='contact-article'>
+          <p class='text-bold'>Concert Halls</p>
+          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>

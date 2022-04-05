@@ -1,0 +1,68 @@
+<section *ngIf="concert" class='contact-section'>
+  <div class='contact-content'>
+    <div class='contact-title-container'>
+      <h2>VIEW CONCERT DETAILS</h2>
+    </div>
+    <div class='contact-body'>
+      <div class='contact-body-left'>
+
+        <form >
+
+
+
+          <label >
+            Artist
+            <br/>
+           <div>{{concert.artist.bandName}}</div>
+          </label>
+
+          <label >
+            Concert hall
+            <br/>
+            <div>{{concert.concertHall.hallName}}</div>
+          </label>
+
+
+
+          <label >
+            Description
+            <br/>
+            <div>{{concert.description}}</div>
+          </label>
+
+          <label>
+            Date
+            <br/>
+            <div>{{concert.time}}</div>
+          </label>
+
+          <label>
+            Price
+            <br/>
+            <div>{{concert.price}}</div>
+          </label>
+
+
+          <button (click)="goBack()"   type='submit' class='btn'>
+            Go Back
+          </button>
+
+        </form>
+      </div>
+      <div class='contact-body-right'>
+        <div class='contact-article'>
+          <p class='text-bold'>Artist</p>
+          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
+        </div>
+        <div class='contact-article'>
+          <p class='text-bold'>Concert Halls</p>
+          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>

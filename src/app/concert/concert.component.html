@@ -1,0 +1,39 @@
+
+<div *ngIf="concerts" class='card-section-container'>
+  <div class='card-section-title'>
+    <span class='logan'>UPCOMING CONCERTS </span>
+  </div>
+
+
+  <div class="concerts-info-container">
+    <div *ngFor="let concert of concerts" class="concert-card">
+
+      <p class="card-title">{{concert.artist.bandName}}</p>
+      <p>{{concert.time}}</p>
+      <p>{{concert.concertHall.city}}</p>
+      <div class="btn-wrapper">
+        <button class="btn-tiny">
+          <a routerLink="/concert-update/{{concert.id}}">
+            update
+          </a>
+        </button>
+        <button class="btn-tiny">
+          <a routerLink="/concert-delete/{{concert.id}}">
+            delete
+          </a>
+        </button>
+      </div>
+      <button class="btn-smaller">
+        <a routerLink="/concert-detail/{{concert.id}}">
+          details
+        </a>
+      </button>
+    </div>
+  </div>
+  <button class="btn-add">
+    <a routerLink="/concert-new">
+      ADD CONCERT
+    </a>
+  </button>
+</div>
+
