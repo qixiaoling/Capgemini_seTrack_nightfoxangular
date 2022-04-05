@@ -9,6 +9,10 @@ import {ArtistComponent} from "./artist/artist.component";
 import {ArtistDetailComponent} from "./artist-detail/artist-detail.component";
 import {ArtistNewComponent} from "./artist-new/artist-new.component";
 import {ArtistUpdateComponent} from "./artist-update/artist-update.component";
+import {ConcerthallComponent} from "./concerthall/concerthall.component";
+import {ConcerthallDetailComponent} from "./concerthall-detail/concerthall-detail.component";
+import {ConcerthallNewComponent} from "./concerthall-new/concerthall-new.component";
+import {ConcerthallUpdateComponent} from "./concerthall-update/concerthall-update.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -22,7 +26,10 @@ const routes: Routes = [
   { path: 'artist-detail/:id', component: ArtistDetailComponent},
   { path: 'artist-new', component:ArtistNewComponent},
   { path: 'artist-update/:id', component:ArtistUpdateComponent},
-  { path: 'artist-delete/:id', component:ArtistDetailComponent},
+  { path: 'concerthall', component: ConcerthallComponent},
+  { path: 'concerthall-detail/:id', component: ConcerthallDetailComponent},
+  { path: 'concerthall-new', component:ConcerthallNewComponent},
+  { path: 'concerthall-update/:id', component:ConcerthallUpdateComponent}
 ];
 
 @NgModule({
