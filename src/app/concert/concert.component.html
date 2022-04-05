@@ -12,8 +12,16 @@
       <p>{{concert.time}}</p>
       <p>{{concert.concertHall.city}}</p>
       <div class="btn-wrapper">
-        <button class="btn-tiny">update</button>
-        <button class="btn-tiny">delete</button>
+        <button class="btn-tiny">
+          <a routerLink="/concert-update/{{concert.id}}">
+            update
+          </a>
+        </button>
+        <button class="btn-tiny">
+          <a routerLink="/concert-delete/{{concert.id}}">
+            delete
+          </a>
+        </button>
       </div>
       <button class="btn-smaller">
         <a routerLink="/concert-detail/{{concert.id}}">

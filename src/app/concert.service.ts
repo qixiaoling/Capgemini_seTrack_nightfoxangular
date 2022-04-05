@@ -3,7 +3,7 @@ import {Concert} from "./concerts";
 
 import {Observable, of} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {ConcertObj} from "./concertObj";
+import {ActivatedRoute} from "@angular/router";
 
 
 
@@ -18,7 +18,7 @@ export class ConcertService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute) { }
 
   getConcert(id: Number): Observable<Concert>{
     const concert = this.httpClient.get<Concert>( 'http://localhost:8082/concert/getbyconcertid/' + id.toString());
@@ -41,6 +41,17 @@ export class ConcertService {
 
         // catchError(this.handleError<Hero[]>('getHeroes', []))
       )
+  }
+  updateConcert(concert: Concert): Observable<Concert>{
+    console.log(JSON.stringify(concert));
+    const concertPayload = {} as Concert;
+    concertPayload.description = concert.description;
+    concertPayload.time = concert.time;
+    concertPayload.price = concert.price;
+
+
+    return this.httpClient.put<Concert>('http://localhost:8082/concert/updateConcert' + '/' + concert.id, concertPayload, this.httpOptions)
+      .pipe()
 
   }
 
