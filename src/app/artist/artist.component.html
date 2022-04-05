@@ -1,0 +1,38 @@
+
+<div *ngIf="artists" class='card-section-container'>
+  <div class='card-section-title'>
+    <span class='logan'>ARTISTS </span>
+  </div>
+
+
+  <div class="concerts-info-container">
+    <div *ngFor="let artist of artists" class="concert-card">
+
+      <p class="card-title">{{artist.bandName}}</p>
+      <div class="btn-wrapper">
+        <button class="btn-tiny">
+          <a routerLink="/artist-update/{{artist.id}}">
+            update
+          </a>
+        </button>
+        <button class="btn-tiny">
+          <a routerLink="/artist-delete/{{artist.id}}">
+            delete
+          </a>
+        </button>
+      </div>
+      <button class="btn-smaller">
+        <a routerLink="/artist-detail/{{artist.id}}">
+          details
+        </a>
+      </button>
+    </div>
+  </div>
+  <button class="btn-add">
+    <a routerLink="/artist-new">
+      ADD ARTIST
+    </a>
+  </button>
+</div>
+
+

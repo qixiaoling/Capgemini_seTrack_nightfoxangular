@@ -1,0 +1,129 @@
+.card-section-container {
+  width: 100vw;
+  height:92vh;
+  background: url('../../Assets/Images/home-page-background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card-section-title{
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+.logan {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFC812;
+}
+.concerts-info-container{
+  width: 65%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  align-items: center;
+  padding: 0 3rem;
+}
+@media (min-width: 768px) {
+  .concerts-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .concerts-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+  }
+}
+
+.concert-card {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background: #262626;
+  color:#FAB23D;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  font-family: Montserrat, sans-serif;
+
+
+}
+card-title {
+  font-size: 1.85rem;
+}
+.card-container img,
+.card-container p {
+  margin-bottom: 0.85em;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.btn-smaller,
+.btn-tiny {
+  background-color: #FFC812;
+  transition: all 0.3s linear;
+  border: none;
+  color: #000;
+}
+.btn-smaller:hover {
+  transform: scale(1.1);
+
+}
+.btn-smaller a {
+  text-decoration: none;
+  color: #000;
+}
+.btn-smaller {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.115rem 0.5rem;
+}
+.btn-tiny {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.115rem 0.5rem;
+}
+
+.btn-add {
+  background-color: #FAB23D;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.25rem;
+  transition: all 0.3s linear;
+  border: none;
+  margin-bottom: 3rem;
+
+}
+.btn-add:hover {
+  transform: scale(1.1);
+
+}
+.btn-add a {
+  text-decoration: none;
+  color: #262626;
+}

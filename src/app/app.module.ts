@@ -16,6 +16,10 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelect, MatSelectModule} from "@angular/material/select";
 import { ConcertUpdateComponent } from './concert-update/concert-update.component';
+import { ArtistComponent } from './artist/artist.component';
+import { ArtistNewComponent } from './artist-new/artist-new.component';
+import { ArtistUpdateComponent } from './artist-update/artist-update.component';
+import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ConcertUpdateComponent } from './concert-update/concert-update.componen
     HomeComponent,
     ConcertDetailComponent,
     ConcertNewComponent,
-    ConcertUpdateComponent
+    ConcertUpdateComponent,
+    ArtistComponent,
+    ArtistNewComponent,
+    ArtistUpdateComponent,
+    ArtistDetailComponent
   ],
   imports: [
     BrowserModule,

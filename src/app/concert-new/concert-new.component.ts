@@ -54,6 +54,7 @@ export class ConcertNewComponent implements OnInit {
 
       this.concertService.addConcert(value)
         .subscribe();
+
     }
 
 
