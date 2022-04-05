@@ -48,16 +48,16 @@ export class ConcertNewComponent implements OnInit {
   getArtist(id:Number){
     this.artistService.getArtist(id).subscribe(
       x=>{
-        console.log(x);
+        // console.log(x);
         this.concert.artist = x;
-        console.log("I am the artist: "+ JSON.stringify(this.concert.artist) );
+        // console.log("I am the artist: "+ JSON.stringify(this.concert.artist) );
       }
     )
   }
   getConcertHall(id:Number){
     this.concertHallService.getConcertHall(id).subscribe(
       x=>{
-        console.log(x);
+        // console.log(x);
         this.concert.concertHall = x;
       }
     )
@@ -78,14 +78,12 @@ export class ConcertNewComponent implements OnInit {
       this.concert.time = value.time;
       this.concert.price = (Number)(value.price);
       this.getArtist((Number)(value.artist));
-      // this.artist = this.getArtist((Number)(value.artist));
       this.getConcertHall((Number)(value.concertHall));
       console.log(this.concert);
       console.log(this.concert.artist);
+      this.concertService.addConcert(this.concert)
+        .subscribe();
     }
-
-    this.concertService.addConcert(this.concert)
-      .subscribe();
 
 
 
