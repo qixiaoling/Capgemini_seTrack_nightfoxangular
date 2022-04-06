@@ -26,7 +26,7 @@
 
           <label for="artist">Artist</label>
           <select id="artist" name="artist" ngModel class="drop-down-select">
-            <option *ngFor = "let artist of artists" [value]="artist">
+            <option *ngFor = "let artist of artists" [ngValue]="artist">
               {{artist.bandName}}
             </option>
 
@@ -34,7 +34,7 @@
 
           <label for="concertHall">Concert Hall</label>
           <select id="concertHall" name="concertHall" ngModel  class="drop-down-select" >
-            <option *ngFor="let concertHall of concertHalls" [value]="concertHall">
+            <option *ngFor="let concertHall of concertHalls" [ngValue]="concertHall">
               {{concertHall.hallName}}
             </option>
 

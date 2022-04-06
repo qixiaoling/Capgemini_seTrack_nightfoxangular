@@ -48,11 +48,9 @@ export class ConcertNewComponent implements OnInit {
   }
 
 
-  onSubmit(value: any): void{
+  onSubmit(value: Concert): void{
     console.log(value);
-
-
-      this.concertService.addConcert(value)
+    this.concertService.addConcert(value)
         .subscribe();
 
     }
