@@ -17,7 +17,7 @@ export class ArtistDetailComponent implements OnInit {
               private location: Location) { }
 
   ngOnInit(): void {
-    this.getArtist()
+    this.getArtist();
   }
   getArtist(){
     const id = Number(this.route.snapshot.paramMap.get('id'));

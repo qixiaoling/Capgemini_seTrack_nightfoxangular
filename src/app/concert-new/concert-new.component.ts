@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistService} from "../artist.service";
 import {Artist} from "../artist";
-import {ConcertHallService} from "../concert-hall.service";
+import {ConcerthallService} from "../concerthall.service";
 import {Concerthall} from "../concerthall";
 import {ConcertService} from "../concert.service";
 import {Concert} from "../concerts";
-import {ConcertObj} from "../concertObj";
-import {Observable} from "rxjs";
+
 
 @Component({
   selector: 'app-concert-new',
@@ -23,7 +22,7 @@ export class ConcertNewComponent implements OnInit {
 
 
   constructor(private artistService : ArtistService,
-              private concertHallService: ConcertHallService,
+              private concertHallService: ConcerthallService,
               private concertService: ConcertService) { }
 
   ngOnInit(): void {

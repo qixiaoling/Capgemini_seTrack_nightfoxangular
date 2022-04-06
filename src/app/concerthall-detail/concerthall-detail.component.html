@@ -1,1 +1,71 @@
-<p>concerthall-detail works!</p>
+<section *ngIf="concerthall" class='contact-section'>
+  <div class='contact-content'>
+    <div class='contact-title-container'>
+      <h2>VIEW CONCERT HALL DETAILS</h2>
+    </div>
+    <div class='contact-body'>
+      <div class='contact-body-left'>
+        <form >
+          <label >
+            Concert Hall Name
+            <br/>
+            <div>{{concerthall.hallName}}</div>
+          </label>
+          <label >
+            Street
+            <br/>
+            <div>{{concerthall.street}}</div>
+          </label>
+          <label >
+            House Number
+            <br/>
+            <div>{{concerthall.number}}</div>
+          </label>
+
+          <label >
+            City
+            <br/>
+            <div>{{concerthall.city}}</div>
+          </label>
+          <label >
+            Phone Number
+            <br/>
+            <div>{{concerthall.phone}}</div>
+          </label>
+
+          <label >
+            Capacity
+            <br/>
+            <div>{{concerthall.capacity}}</div>
+          </label>
+          <label >
+            Open Air Option
+            <br/>
+            <div>{{concerthall.openAir}}</div>
+          </label>
+
+          <button (click)="goBack()"   type='submit' class='btn'>
+            Go Back
+          </button>
+
+        </form>
+      </div>
+      <div class='contact-body-right'>
+        <div class='contact-article'>
+          <p class='text-bold'>Artist</p>
+          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
+        </div>
+        <div class='contact-article'>
+          <p class='text-bold'>Concert Halls</p>
+          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
