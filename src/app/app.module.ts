@@ -24,6 +24,7 @@ import { ConcerthallComponent } from './concerthall/concerthall.component';
 import { ConcerthallUpdateComponent } from './concerthall-update/concerthall-update.component';
 import { ConcerthallDetailComponent } from './concerthall-detail/concerthall-detail.component';
 import { ConcerthallNewComponent } from './concerthall-new/concerthall-new.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ConcerthallNewComponent } from './concerthall-new/concerthall-new.compo
     ConcerthallComponent,
     ConcerthallUpdateComponent,
     ConcerthallDetailComponent,
-    ConcerthallNewComponent
+    ConcerthallNewComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
