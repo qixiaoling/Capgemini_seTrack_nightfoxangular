@@ -11,7 +11,7 @@ import {Location} from "@angular/common";
 })
 export class ReviewComponent implements OnInit {
 
-  indexArray: number = 3;
+  indexArray: number = 0;
   reviews: Review[] = [];
 
 
@@ -21,7 +21,7 @@ export class ReviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getReviewsByArtistId();
-    console.log(this.indexArray);
+    console.log(this.route.snapshot.paramMap.get('id'));
   }
 
   getReviewsByArtistId(): void {

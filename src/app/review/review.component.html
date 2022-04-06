@@ -2,11 +2,12 @@
 
 
   <div  *ngIf="reviews[indexArray]" class='review-container '>
-
-    <div>
+    <div className='review-title'>
+      <h2>OUR FANS SAID</h2>
+    </div>
+    <div class="review-body">
       <p class="review-name">{{reviews[indexArray].nameReviewer}}</p>
       <p class="review-text">{{reviews[indexArray].description}}</p>
-      <p class="review-job-title">{{reviews[indexArray].like}}</p>
       <div class="review-btn-container">
         <button class="prev-btn" (click)="prevPerson(indexArray)">
           prev
