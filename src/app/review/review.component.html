@@ -7,6 +7,18 @@
     </div>
     <div class="review-body">
       <p class="review-name">{{reviews[indexArray].nameReviewer}}</p>
+      <div class="review-btn-container">
+        <button class="btn-tiny">
+          <a routerLink="/review-update/{{reviews[indexArray].id}}">
+            update
+          </a>
+        </button>
+        <button class="btn-tiny">
+          <a routerLink="/review-delete/{{reviews[indexArray].id}}">
+            delete
+          </a>
+        </button>
+      </div>
       <p class="review-text">{{reviews[indexArray].description}}</p>
       <div class="review-btn-container">
         <button class="prev-btn" (click)="prevPerson(indexArray)">

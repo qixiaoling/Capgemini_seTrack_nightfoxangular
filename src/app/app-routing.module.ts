@@ -13,6 +13,8 @@ import {ConcerthallComponent} from "./concerthall/concerthall.component";
 import {ConcerthallDetailComponent} from "./concerthall-detail/concerthall-detail.component";
 import {ConcerthallNewComponent} from "./concerthall-new/concerthall-new.component";
 import {ConcerthallUpdateComponent} from "./concerthall-update/concerthall-update.component";
+import {ReviewNewComponent} from "./review-new/review-new.component";
+import {ReviewUpdateComponent} from "./review-update/review-update.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -28,7 +30,9 @@ const routes: Routes = [
   { path: 'concerthalls', component: ConcerthallComponent},
   { path: 'concerthall-detail/:id', component: ConcerthallDetailComponent},
   { path: 'concerthall-new', component:ConcerthallNewComponent},
-  { path: 'concerthall-update/:id', component:ConcerthallUpdateComponent}
+  { path: 'concerthall-update/:id', component:ConcerthallUpdateComponent},
+  { path: 'review-new', component:ReviewNewComponent},
+  { path: 'review-update/:id', component:ReviewUpdateComponent}
 
 ];
 
