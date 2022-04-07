@@ -16,8 +16,10 @@ import {ArtistService} from "../artist.service";
 export class ReviewNewComponent implements OnInit {
 
   artist?: Artist;
+  reviewPayload?: Review;
 
-  constructor(private artistService: ArtistService,
+  constructor(private reviewService: ReviewService,
+              private artistService: ArtistService,
               private route: ActivatedRoute,
               private location: Location) {
   }
@@ -38,7 +40,11 @@ export class ReviewNewComponent implements OnInit {
       )
   }
   onSubmit(value: any): void{
-    return;
+    console.log(value);
+    value.artistId = this.route.snapshot.paramMap.get('id');
+    this.reviewService.addReview(value)
+      .subscribe();
+    this.goBack();
   }
 
   goBack(): void{

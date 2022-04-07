@@ -37,7 +37,7 @@ export class ReviewService {
   }
   addReview(review: Review): Observable<Review>{
     console.log(JSON.stringify(review));
-    return this.httpClient.post<Review>('http://localhost:8083/review/add/' + review.id.toString(), review, this.httpOptions)
+    return this.httpClient.post<Review>('http://localhost:8083/review/add/' + review.artistId, review, this.httpOptions)
       .pipe();
 
   }

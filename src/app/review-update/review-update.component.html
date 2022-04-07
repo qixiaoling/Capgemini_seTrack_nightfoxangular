@@ -37,23 +37,17 @@
            Would You*
             <div>
               <label class="label-inline">
-                <input #reviewLikeRef="ngModel" type="radio" value="true" required ngModel>
+                <input #reviewLikeRef="ngModel" type="radio" value="true" name="like" required ngModel>
                 Recommend
-               <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
-              Please enter your name.
-               </div>
               </label>
               <label class="label-inline">
-                <input #reviewLikeRef="ngModel" type="radio" value="false" required ngModel>
+                <input #reviewLikeRef="ngModel" type="radio" value="false" name="like" required ngModel>
                 Never Recommend
-                <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
-                  Please enter your name.
-                </div>
               </label>
-
-
             </div>
-
+            <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
+              Please make an choice
+            </div>
           </label>
 
 

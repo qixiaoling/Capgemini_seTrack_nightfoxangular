@@ -14,7 +14,7 @@
           <label>
             Your Name*
             <br/>
-            <input #reviewNameRef="ngModel" required type='text' name="bandName" ngModel/>
+            <input #reviewNameRef="ngModel" required type='text' name="nameReviewer" ngModel/>
             <div [hidden]="reviewNameRef.valid || reviewNameRef.pristine"  class="alert alert-danger">
               Please enter your name.
             </div>
@@ -33,6 +33,24 @@
               </div>
             </div>
           </label>
+
+          <label>
+            Would You*
+            <div>
+              <label class="label-inline">
+                <input #reviewLikeRef="ngModel" type="radio" value="true" name="like" required ngModel>
+                Recommend
+              </label>
+              <label class="label-inline">
+                <input #reviewLikeRef="ngModel" type="radio" value="false" name="like" required ngModel>
+                Never Recommend
+              </label>
+            </div>
+            <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
+              Please make an choice
+            </div>
+          </label>
+
 
           <button [disabled]="!reviewForm.form.valid"  type='submit' class='btn'>
             Submit

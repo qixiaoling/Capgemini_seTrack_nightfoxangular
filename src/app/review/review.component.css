@@ -67,3 +67,8 @@
   text-decoration: none;
   color: #FAB23D;
 }
+.label-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
