@@ -42,4 +42,8 @@ export class ArtistService {
       .pipe();
 
   }
+  getArtistByBandName(bandName: String) : Observable<Artist> {
+    return this.httpClient.get<Artist> ('http://localhost:8082/artist/getbyname/' + bandName)
+      .pipe();
+  }
 }
