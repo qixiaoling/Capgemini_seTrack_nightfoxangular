@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable, pipe} from "rxjs";
 import {Artist} from "./artist";
 import {Review} from "./review";
+import {Concerthall} from "./concerthall";
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,12 @@ export class ReviewService {
   getReviewById(id: Number): Observable<Review> {
     const review = this.httpClient.get<Review>('http://localhost:8083/review/getbyid/' + id.toString());
     return review;
+
+  }
+  addReview(review: Review): Observable<Review>{
+    console.log(JSON.stringify(review));
+    return this.httpClient.post<Review>('http://localhost:8083/review/add/' + review.id.toString(), review, this.httpOptions)
+      .pipe();
 
   }
 

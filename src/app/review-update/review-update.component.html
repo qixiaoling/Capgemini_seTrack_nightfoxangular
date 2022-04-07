@@ -14,7 +14,7 @@
             <input #reviewNameRef="ngModel" required type='text' name="nameReviewer" [ngModel]="review.nameReviewer " />
             <!--            pre-filled-->
             <div [hidden]="reviewNameRef.valid || reviewNameRef.pristine"  class="alert alert-danger">
-              Please enter the band name.
+              Please enter your name.
             </div>
           </label>
 
@@ -25,13 +25,38 @@
             <!--            pre-filled-->
             <div *ngIf="reviewDesRef.errors && (reviewDesRef.dirty || reviewDesRef.touched)"  class="alert alert-danger">
               <div [hidden]="!reviewDesRef.errors?.['required']">
-                Please enter description
+                Please enter your comment
               </div>
               <div [hidden]=" !reviewDesRef.errors?.['maxlength']">
-                Please enter at least 200 characters
+                Please enter maximum 200 characters
               </div>
             </div>
           </label>
+
+          <label>
+           Would You*
+            <div>
+              <label class="label-inline">
+                <input #reviewLikeRef="ngModel" type="radio" value="true" required ngModel>
+                Recommend
+               <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
+              Please enter your name.
+               </div>
+              </label>
+              <label class="label-inline">
+                <input #reviewLikeRef="ngModel" type="radio" value="false" required ngModel>
+                Never Recommend
+                <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
+                  Please enter your name.
+                </div>
+              </label>
+
+
+            </div>
+
+          </label>
+
+
           <div class="btn-wrapper">
             <button [disabled]="!(reviewForm.valid && reviewForm.dirty)"  type='submit' class='btn'>
               Submit

@@ -19,9 +19,17 @@
           </label>
 
           <app-review></app-review>
-          <button (click)="goBack()"   type='submit' class='btn'>
-            Go Back
-          </button>
+
+          <div class="btn-wrapper">
+            <button (click)="goBack()"   type='submit' class='btn'>
+              Go Back
+            </button>
+            <button type='submit' class='btn'>
+              <a routerLink="/review-new/{{artist.id}}">
+                Add an comment
+              </a>
+            </button>
+          </div>
 
         </form>
       </div>

@@ -20,6 +20,7 @@
         </button>
       </div>
       <p class="review-text">{{reviews[indexArray].description}}</p>
+      <p>{{reviews[indexArray].like ? 'Will Recommend': 'Never Recommend'}}</p>
       <div class="review-btn-container">
         <button class="prev-btn" (click)="prevPerson(indexArray)">
           prev

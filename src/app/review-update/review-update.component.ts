@@ -42,7 +42,11 @@ export class ReviewUpdateComponent implements OnInit {
 
   }
   onSubmit(value: any): void{
-    return;
+    console.log(value);
+    value.id = this.route.snapshot.paramMap.get('id');
+    this.reviewService.updateReview(value)
+      .subscribe();
+    this.goBack();
   }
   goBack(): void{
     this.location.back();

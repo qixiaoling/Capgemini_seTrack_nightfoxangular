@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'concerthall-detail/:id', component: ConcerthallDetailComponent},
   { path: 'concerthall-new', component:ConcerthallNewComponent},
   { path: 'concerthall-update/:id', component:ConcerthallUpdateComponent},
-  { path: 'review-new', component:ReviewNewComponent},
+  { path: 'review-new/:id', component:ReviewNewComponent},
   { path: 'review-update/:id', component:ReviewUpdateComponent}
 
 ];
