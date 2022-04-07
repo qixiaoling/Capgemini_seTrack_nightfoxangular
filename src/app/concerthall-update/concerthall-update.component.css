@@ -84,6 +84,12 @@ label > textarea  {
   border-top: 1px solid #262626;
   margin: 2rem 0 3rem 0;
 }
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .btn {
   background-color: #000;
   border-radius: 0.25rem;
@@ -94,6 +100,10 @@ label > textarea  {
   border: none;
   color: #FFC812;
 
+}
+.btn a{
+  color: #FFC812;
+  text-decoration: none;
 }
 .btn:hover {
   transform: scale(1.1);
