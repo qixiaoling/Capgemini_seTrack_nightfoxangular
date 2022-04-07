@@ -9,7 +9,9 @@ import {ReviewService} from "../review.service";
 @Component({
   selector: 'app-review-update',
   templateUrl: './review-update.component.html',
-  styleUrls: ['./review-update.component.css']
+  styleUrls: ['./review-update.component.css'],
+  styles: [`input.ng-invalid{border-left: 5px solid red;}
+    input.ng-valid{border-left: 5px solid green;}`]
 })
 export class ReviewUpdateComponent implements OnInit {
 
@@ -41,6 +43,9 @@ export class ReviewUpdateComponent implements OnInit {
   }
   onSubmit(value: any): void{
     return;
+  }
+  goBack(): void{
+    this.location.back();
   }
 
 

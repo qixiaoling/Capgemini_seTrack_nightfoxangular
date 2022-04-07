@@ -7,38 +7,25 @@
       <div class='contact-body-left'>
 
         <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
-
-<!--          <label>-->
-<!--            Artist *-->
-<!--            <br/>-->
-<!--            <input #concertFef="ngModel" required type='text' name="artist" ngModel/>-->
-<!--            <div [hidden]="concertFef.valid || concertFef.pristine"  class="alert alert-danger">-->
-<!--              Please enter artist name-->
-<!--            </div>-->
-<!--          </label>-->
-<!--          <label for="artist">Artist</label>-->
-<!--          <select id="artist" name="artist" [(ngModel)]="ArtistId" class="drop-down-select">-->
-<!--            <option value="1">REX ORANGE COUNTY	</option>-->
-<!--            <option value="2" selected>SIMPLE MINDS	</option>-->
-<!--            <option value="3">THE ROLLING STONES</option>-->
-<!--            <option value="4">DAVE</option>-->
-<!--          </select>-->
-
           <label for="artist">Artist</label>
-          <select id="artist" name="artist" ngModel class="drop-down-select">
+          <select id="artist" name="artist" ngModel class="drop-down-select" required>
             <option *ngFor = "let artist of artists" [ngValue]="artist">
               {{artist.bandName}}
             </option>
-
           </select>
+          <div [hidden]="concertRef.valid"  class="alert alert-danger">
+            Please select an artist.
+          </div>
 
           <label for="concertHall">Concert Hall</label>
-          <select id="concertHall" name="concertHall" ngModel  class="drop-down-select" >
+          <select id="concertHall" name="concertHall" ngModel  class="drop-down-select" required>
             <option *ngFor="let concertHall of concertHalls" [ngValue]="concertHall">
               {{concertHall.hallName}}
             </option>
-
           </select>
+          <div [hidden]="concertRef.valid"  class="alert alert-danger">
+            Please select an concert hall.
+          </div>
 
 <!--          <label for="concert-hall">Concert Hall</label>-->
 <!--          <select id="concert-hall" name="concert-hall" [(ngModel)]="ConcertHallId"  class="drop-down-select" >-->
