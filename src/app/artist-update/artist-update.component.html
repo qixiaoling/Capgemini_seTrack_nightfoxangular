@@ -1,26 +1,29 @@
-<section *ngIf="artist" class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>UPDATE ARTIST</h2>
-    </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
+<div *ngIf="artist" class='concert-new-container'>
 
-        <form #artistForm=ngForm (ngSubmit)="onSubmit(artistForm.value)" novalidate>
+  <div class='crud-container-title'>
+    <p>UPDATE ARTIST</p>
+  </div>
+
+  <div class='crud-body'>
+    <form class="crud-body-form" #artistForm=ngForm (ngSubmit)="onSubmit(artistForm.value)" novalidate>
+      <div class="form-body">
+        <div class="form-left">
           <label>
             Band name*
             <br/>
-            <input #artistNameRef="ngModel" required type='text' name="bandName" [ngModel]="artist.bandName"/>
-            <div [hidden]="artistNameRef.valid || artistNameRef.pristine"  class="alert alert-danger">
+            <input #artistNameRef="ngModel" required type='text' name="bandName" [ngModel]="artist.bandName" class="form-right-input"/>
+            <div [hidden]="artistNameRef.valid || artistNameRef.pristine" class="alert alert-danger">
               Please enter the band name.
             </div>
           </label>
-
-          <label >
+        </div>
+        <div class="form-left">
+          <label>
             Description*
             <br/>
-            <input #artistDesRef="ngModel" maxlength="500" required type='text' name="description" [ngModel]="artist.description"/>
-            <div *ngIf="artistDesRef.errors && (artistDesRef.dirty || artistDesRef.touched)"  class="alert alert-danger">
+            <input #artistDesRef="ngModel" maxlength="500" required type='text' name="description"
+                   [ngModel]="artist.description" class="form-right-input"/>
+            <div *ngIf="artistDesRef.errors && (artistDesRef.dirty || artistDesRef.touched)" class="alert alert-danger" >
               <div [hidden]="!artistDesRef.errors?.['required']">
                 Please enter description
               </div>
@@ -29,34 +32,23 @@
               </div>
             </div>
           </label>
-          <div class="btn-wrapper">
-            <button [disabled]="!(artistForm.valid && artistForm.dirty)"  type='submit' class='btn'>
-              Submit
-            </button>
-            <button type='submit' class='btn'>
-              <a routerLink="/artists">
-                Cancel
-              </a>
-            </button>
-          </div>
-
-        </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
         </div>
       </div>
+      <div class="btn-wrapper">
+        <button [disabled]="!(artistForm.valid && artistForm.dirty)" type='submit' class='btn-submit'>
+          Submit
+        </button>
+        <button type='submit' class='btn-cancel'>
+          <a routerLink="/artists">
+            Cancel
+          </a>
+        </button>
+      </div>
 
-    </div>
+    </form>
 
   </div>
 
 
-</section>
+</div>
 

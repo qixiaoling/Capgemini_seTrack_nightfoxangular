@@ -131,10 +131,18 @@
   margin-left: 10%;
   margin-top: 1rem;
 }
+.btn-cancel > a{
+  text-decoration: none;
+  color:#262626;
+}
 .btn-cancel:hover {
   background-color: #262626;
   color: #FFC812;
   cursor: pointer;
+}
+.btn-cancel:hover > a{
+  text-decoration: none;
+  color:#FFC812;
 }
 button:disabled,
 button[disabled],
