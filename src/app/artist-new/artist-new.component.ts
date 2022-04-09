@@ -5,7 +5,7 @@ import {Location} from "@angular/common";
 @Component({
   selector: 'app-artist-new',
   templateUrl: './artist-new.component.html',
-  styleUrls: ['./artist-new.component.css'],
+  styleUrls: ['../concert-new/concert-new.component.css'],
   styles: [`input.ng-invalid{border-left: 5px solid red;}
     input.ng-valid{border-left: 5px solid green;}`]
 })

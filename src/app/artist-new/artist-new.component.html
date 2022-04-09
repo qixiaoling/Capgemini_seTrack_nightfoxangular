@@ -1,29 +1,29 @@
-<section class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>CREATE ARTIST</h2>
-    </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
+<div class='concert-new-container'>
 
-        <form #artistForm=ngForm (ngSubmit)="onSubmit(artistForm.value)" novalidate>
+  <div class='crud-container-title'>
+    <p>CREATE ARTIST</p>
+  </div>
+  <div class='crud-body'>
+    <form class="crud-body-form" #artistForm=ngForm (ngSubmit)="onSubmit(artistForm.value)" novalidate>
 
-
-
+      <div class="form-body">
+        <div class="form-left">
           <label>
             Band name*
             <br/>
-            <input #artistRef="ngModel" required type='text' name="bandName" ngModel/>
-            <div [hidden]="artistRef.valid || artistRef.pristine"  class="alert alert-danger">
+            <input #artistRef="ngModel" required type='text' name="bandName" ngModel class="form-right-input"/>
+            <div [hidden]="artistRef.valid || artistRef.pristine" class="alert alert-danger">
               Please enter the band name.
             </div>
           </label>
-
-          <label >
+        </div>
+        <div class="form-right">
+          <label>
             Description*
             <br/>
-            <input #artistRef="ngModel" maxlength="200" required type='text' name="description" ngModel/>
-            <div *ngIf="artistRef.errors && (artistRef.dirty || artistRef.touched)"  class="alert alert-danger">
+            <input #artistRef="ngModel" maxlength="200" required type='text' name="description" ngModel
+                   class="form-right-input"/>
+            <div *ngIf="artistRef.errors && (artistRef.dirty || artistRef.touched)" class="alert alert-danger">
               <div [hidden]="!artistRef.errors?.['required']">
                 Please enter description
               </div>
@@ -32,27 +32,18 @@
               </div>
             </div>
           </label>
-
-          <button [disabled]="!artistForm.form.valid"  type='submit' class='btn'>
-            Submit
-          </button>
-
-        </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
         </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
+
       </div>
 
-    </div>
+      <button [disabled]="!artistForm.form.valid" type='submit' class='btn-submit'>
+        Submit
+      </button>
 
+    </form>
   </div>
 
+</div>
 
-</section>
+
+

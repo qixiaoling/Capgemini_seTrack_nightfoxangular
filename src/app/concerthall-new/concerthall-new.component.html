@@ -1,93 +1,84 @@
-<section class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>CREATE CONCERT HALL</h2>
-    </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
+<div class='concert-new-container'>
+  <div class='crud-container-title'>
+    <p>CREATE CONCERT HALL</p>
+  </div>
+  <div class='crud-body'>
+    <form class="crud-body-form" #concerthallForm=ngForm (ngSubmit)="onSubmit(concerthallForm.value)" novalidate>
 
-        <form #concerthallForm=ngForm (ngSubmit)="onSubmit(concerthallForm.value)" novalidate>
+      <div class="form-body">
 
-
-          <label >
+        <div class="form-left">
+          <label>
             Hall Name*
             <br/>
-            <input #concerthallRef="ngModel" required type='text' name="hallName" ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallNameRef="ngModel" required type='text' name="hallName" ngModel class="form-right-input"/>
+            <div [hidden]="concerthallNameRef.valid || concerthallNameRef.pristine" class="alert alert-danger">
               Please enter the concert hall name
             </div>
           </label>
-
-          <label >
+          <label>
             Street*
             <br/>
-            <input #concerthallRef="ngModel" required type='text' name="street" ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallStreetRef="ngModel" required type='text' name="street" ngModel class="form-right-input"/>
+            <div [hidden]="concerthallStreetRef.valid || concerthallStreetRef.pristine" class="alert alert-danger">
               Please enter the street name
             </div>
           </label>
-
           <label>
             Number*
             <br/>
-            <input  #concerthallRef="ngModel" required type='text' name='number' ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallNumRef="ngModel" required type='text' name='number' ngModel class="form-right-input"/>
+            <div [hidden]="concerthallNumRef.valid || concerthallNumRef.pristine" class="alert alert-danger">
               Please enter the house number
             </div>
           </label>
+        </div>
+
+        <div class="form-right">
           <label>
             City*
             <br/>
-            <input  #concerthallRef="ngModel" required type='text' name='city' ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallCityRef="ngModel" required type='text' name='city' ngModel class="form-right-input"/>
+            <div [hidden]="concerthallCityRef.valid || concerthallCityRef.pristine" class="alert alert-danger">
               Please enter the city
             </div>
           </label>
           <label>
             Phone Number*
             <br/>
-            <input  #concerthallRef="ngModel" required type='text' name='phone' ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallPhoneRef="ngModel" required type='text' name='phone' ngModel class="form-right-input"/>
+            <div [hidden]="concerthallPhoneRef.valid || concerthallPhoneRef.pristine" class="alert alert-danger">
               Please enter the phone number
             </div>
           </label>
           <label>
             Capacity*
             <br/>
-            <input  #concerthallRef="ngModel" required type='text' name='capacity' ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallCapRef="ngModel" required type='text' name='capacity' ngModel class="form-right-input"/>
+            <div [hidden]="concerthallCapRef.valid || concerthallCapRef.pristine" class="alert alert-danger">
               Please enter the capacity
             </div>
           </label>
           <label>
             Open Air*
             <br/>
-            <input  #concerthallRef="ngModel" required type='text' name='openAir' ngModel/>
-            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+            <input #concerthallAirRef="ngModel" required type='text' name='openAir' ngModel class="form-right-input"/>
+            <div [hidden]="concerthallAirRef.valid || concerthallAirRef.pristine" class="alert alert-danger">
               Please enter the open air option
             </div>
           </label>
-          <button [disabled]="!concerthallForm.form.valid"  type='submit' class='btn'>
-            Submit
-          </button>
+        </div>
 
-        </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
       </div>
 
-    </div>
+      <button [disabled]="!concerthallForm.form.valid" type='submit' class='btn-submit'>
+        Submit
+      </button>
 
+    </form>
   </div>
 
+</div>
 
-</section>
+
 
