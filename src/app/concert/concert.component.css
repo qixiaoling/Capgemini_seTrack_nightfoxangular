@@ -9,6 +9,7 @@
   align-items: center;
   font-family: 'Work Sans', sans-serif;
   position: relative;
+  overflow: hidden;
 }
 
 .concert-title-fade-up{
@@ -16,21 +17,25 @@
   margin: 2rem auto;
   text-align: center;
 
+
 }
 .fade-up-text {
-  font-size: 10rem;
+  width: 100%;
+  letter-spacing: 2.5rem;
+  font-size: 11.5rem;
   font-weight: 700;
   color:#cccccc;
   margin: 0;
 }
 .container-title-focus-wrapper {
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
   position: absolute;
   top: 1px;
   transform: translateY(-50%);
   left: 50%;
   transform: translateX(-50%);
+  flex-wrap: nowrap;
 }
 .container-title-focus {
   width: 100%;
@@ -74,6 +79,10 @@
     grid-row-gap: 2rem;
     align-items: center;
   }
+  .container-title-focus-wrapper {
+    max-width: 70%;
+
+  }
 }
 @media (min-width: 992px) {
   .concerts-info-container {
@@ -81,6 +90,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
     align-items: center;
+  }
+  .container-title-focus-wrapper {
+    max-width: 80%;
+
   }
 }
 
@@ -116,14 +129,6 @@ card-title {
   margin-bottom: 0.5rem;
 }
 
-/*.btn-smaller,*/
-/*.btn-tiny {*/
-/*  background-color: #FFC812;*/
-/*  transition: all 0.3s linear;*/
-/*  border: none;*/
-/*  color: #000;*/
-/*  font-family: 'Work Sans', sans-serif;*/
-/*}*/
 
 .btn-smaller,
 .btn-tiny {
