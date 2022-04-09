@@ -1,91 +1,83 @@
-<section class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>CREATE CONCERT</h2>
-    </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
+<div class='concert-new-container'>
 
-        <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
-          <label for="artist">Artist</label>
-          <select id="artist" name="artist" ngModel class="drop-down-select" required>
-            <option *ngFor = "let artist of artists" [ngValue]="artist">
-              {{artist.bandName}}
-            </option>
-          </select>
-          <div [hidden]="concertRef.valid"  class="alert alert-danger">
-            Please select an artist.
-          </div>
+  <div class='crud-container-title'>
+    <p>CREATE CONCERT</p>
+  </div>
+  <div class='crud-body'>
+    <form class="crud-body-form" #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
 
-          <label for="concertHall">Concert Hall</label>
-          <select id="concertHall" name="concertHall" ngModel  class="drop-down-select" required>
-            <option *ngFor="let concertHall of concertHalls" [ngValue]="concertHall">
-              {{concertHall.hallName}}
-            </option>
-          </select>
-          <div [hidden]="concertRef.valid"  class="alert alert-danger">
-            Please select an concert hall.
-          </div>
+     <div class="form-body">
+       <div class="form-left">
+         <label for="artist">Artist
+           <select id="artist" name="artist" ngModel required class="form-left-select"  >
+             <option *ngFor="let artist of artists" [ngValue]="artist">
+               {{artist.bandName}}
+             </option>
+           </select>
+<!--           <div [hidden] = "concertRef.valid" class="alert">-->
+<!--             Please select an artist.-->
+<!--           </div>-->
+         </label>
 
-<!--          <label for="concert-hall">Concert Hall</label>-->
-<!--          <select id="concert-hall" name="concert-hall" [(ngModel)]="ConcertHallId"  class="drop-down-select" >-->
-<!--            <option value="1">Ahoy</option>-->
-<!--            <option value="2">Johan Cruijff ArenA</option>-->
-<!--            <option value="3" selected>AFAS Live</option>-->
-<!--            <option value="4">Koninklijk Theater Carré</option>-->
-<!--            <option value="5">Ziggo Dome</option>-->
-<!--          </select>-->
+         <label for="concertHall">Concert Hall
+           <select id="concertHall" name="concertHall" ngModel required class="form-left-select" >
+             <option *ngFor="let concertHall of concertHalls" [ngValue]="concertHall">
+               {{concertHall.hallName}}
+             </option>
+           </select>
+<!--           <div class="alert">-->
+<!--             Please select an concert hall.-->
+<!--           </div>-->
+         </label>
 
-          <label >
-            Description*
-            <br/>
-            <input #concertRef="ngModel" minlength="5" required type='text' name="description" ngModel/>
-            <div *ngIf="concertRef.errors && (concertRef.dirty || concertRef.touched)"  class="alert alert-danger">
-              <div [hidden]="!concertRef.errors?.['required']">
-                Please enter description
-              </div>
-              <div [hidden]=" !concertRef.errors?.['minlength']">
-                Please enter at least 5 characters
-              </div>
-            </div>
-          </label>
+       </div>
 
-          <label >
-            Ticket Price
-            <br/>
-            <input #concertRef="ngModel" required type='text' name="price" ngModel/>
-            <div [hidden]="concertRef.valid || concertRef.pristine"  class="alert alert-danger">
-              Please enter ticket price
-            </div>
-          </label>
-          <label>
-            Date *
-            <br/>
-            <input  #concertRef="ngModel" required type='text' name='time' ngModel/>
-            <div [hidden]="concertRef.valid || concertRef.pristine"  class="alert alert-danger">
-              Please enter concert date
-            </div>
-          </label>
-          <button [disabled]="!concertForm.form.valid"  type='submit' class='btn'>
-            Submit
-          </button>
+       <div  class="form-right">
 
-        </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
-      </div>
+         <label>
+           Description*
+           <br/>
+           <input #concertDesRef="ngModel" minlength="5" required type='text' name="description" ngModel class="form-right-input"/>
+           <div *ngIf="concertDesRef.errors && (concertDesRef.dirty || concertDesRef.touched)" class="alert alert-danger">
+             <div [hidden]="!concertDesRef.errors?.['required']">
+               Please enter description
+             </div>
+             <div [hidden]=" !concertDesRef.errors?.['minlength']">
+               Please enter at least 5 characters
+             </div>
+           </div>
+         </label>
 
-    </div>
+         <label>
+           Ticket Price
+           <br/>
+           <input #concertTicketRef="ngModel" required type='text' name="price" ngModel class="form-right-input"/>
+           <div [hidden]="concertTicketRef.valid || concertTicketRef.pristine" class="alert alert-danger">
+             Please enter ticket price
+           </div>
+         </label>
 
+         <label>
+           Date *
+           <br/>
+           <input #concertDateRef="ngModel" required type='text' name='time' ngModel class="form-right-input"/>
+           <div [hidden]="concertDateRef.valid || concertDateRef.pristine" class="alert alert-danger">
+             Please enter concert date
+           </div>
+         </label>
+       </div>
+     </div>
+
+      <button [disabled]="!concertForm.form.valid" type='submit' class='btn'>
+        Submit
+      </button>
+
+
+
+
+
+
+    </form>
   </div>
 
-
-</section>
+</div>
