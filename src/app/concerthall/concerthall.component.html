@@ -1,16 +1,22 @@
 
-<div *ngIf="concerthalls" class='card-section-container'>
-  <div class='card-section-title'>
-    <span class='logan'>AVAILABLE HALLS </span>
-  </div>
+<div *ngIf="concerthalls" class='concert-container'>
+  <div class='container-title-fade-up'>
+    <p class='fade-up-text'>HALLS</p>
+    <div class="container-title-focus-wrapper">
+      <div class="container-title-focus">
+        <p class="focus-title-text">03 halls</p>
+        <div class="underline"></div>
+      </div>
+    </div>
 
+  </div>
 
   <div class="concerts-info-container">
     <div *ngFor="let concerthall of concerthalls" class="concert-card">
 
-      <p class="card-title">{{concerthall.hallName}}</p>
-      <p>{{concerthall.city}}</p>
-      <p>{{concerthall.phone}}</p>
+      <p class="card-content">{{concerthall.hallName}}</p>
+      <p class="card-content">{{concerthall.city}}</p>
+      <p class="card-content">{{concerthall.phone}}</p>
       <div class="btn-wrapper">
         <button class="btn-tiny">
           <a routerLink="/concerthall-update/{{concerthall.id}}">
@@ -30,10 +36,10 @@
       </button>
     </div>
   </div>
-  <button class="btn-add">
-    <a routerLink="/concerthall-new">
-      ADD CONCERT HALL
+
+    <a class="btn-add" routerLink="/concerthall-new">
+      ADD HALL
     </a>
-  </button>
+
 </div>
 

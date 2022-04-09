@@ -5,7 +5,7 @@ import {ConcerthallService} from "../concerthall.service";
 @Component({
   selector: 'app-concerthall',
   templateUrl: './concerthall.component.html',
-  styleUrls: ['./concerthall.component.css']
+  styleUrls: ['../concert/concert.component.css']
 })
 export class ConcerthallComponent implements OnInit {
 
