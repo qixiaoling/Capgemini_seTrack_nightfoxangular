@@ -6,11 +6,11 @@
       </a>
       <div class="nav-icon">
         <button class="hamburger-menu"
-        (click)="toggleLinks()">
+        (click)="toggleLinks()" [disabled]="icon? true: false">
           <i class="fa-solid fa-bars"></i>
         </button>
         <button class='search-icon'
-        (click)="toggleIcon()">
+        (click)="toggleIcon()" [disabled]="links? true: false">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
