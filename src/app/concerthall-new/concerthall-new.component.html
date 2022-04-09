@@ -1,0 +1,93 @@
+<section class='contact-section'>
+  <div class='contact-content'>
+    <div class='contact-title-container'>
+      <h2>CREATE CONCERT HALL</h2>
+    </div>
+    <div class='contact-body'>
+      <div class='contact-body-left'>
+
+        <form #concerthallForm=ngForm (ngSubmit)="onSubmit(concerthallForm.value)" novalidate>
+
+
+          <label >
+            Hall Name*
+            <br/>
+            <input #concerthallRef="ngModel" required type='text' name="hallName" ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the concert hall name
+            </div>
+          </label>
+
+          <label >
+            Street*
+            <br/>
+            <input #concerthallRef="ngModel" required type='text' name="street" ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the street name
+            </div>
+          </label>
+
+          <label>
+            Number*
+            <br/>
+            <input  #concerthallRef="ngModel" required type='text' name='number' ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the house number
+            </div>
+          </label>
+          <label>
+            City*
+            <br/>
+            <input  #concerthallRef="ngModel" required type='text' name='city' ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the city
+            </div>
+          </label>
+          <label>
+            Phone Number*
+            <br/>
+            <input  #concerthallRef="ngModel" required type='text' name='phone' ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the phone number
+            </div>
+          </label>
+          <label>
+            Capacity*
+            <br/>
+            <input  #concerthallRef="ngModel" required type='text' name='capacity' ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the capacity
+            </div>
+          </label>
+          <label>
+            Open Air*
+            <br/>
+            <input  #concerthallRef="ngModel" required type='text' name='openAir' ngModel/>
+            <div [hidden]="concerthallRef.valid || concerthallRef.pristine"  class="alert alert-danger">
+              Please enter the open air option
+            </div>
+          </label>
+          <button [disabled]="!concerthallForm.form.valid"  type='submit' class='btn'>
+            Submit
+          </button>
+
+        </form>
+      </div>
+      <div class='contact-body-right'>
+        <div class='contact-article'>
+          <p class='text-bold'>Artist</p>
+          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
+        </div>
+        <div class='contact-article'>
+          <p class='text-bold'>Concert Halls</p>
+          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+

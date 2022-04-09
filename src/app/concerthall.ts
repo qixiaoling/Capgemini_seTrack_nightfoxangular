@@ -3,5 +3,8 @@ export interface Concerthall {
   hallName: String,
   street: String,
   number: number,
-  city: String
+  city: String,
+  capacity: number,
+  phone: String,
+  openAir: boolean
 }

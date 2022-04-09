@@ -101,13 +101,13 @@ label > textarea  {
   color: #FFC812;
 
 }
-.btn:hover {
-  transform: scale(1.1);
-
-}
 .btn a{
   color: #FFC812;
   text-decoration: none;
+}
+.btn:hover {
+  transform: scale(1.1);
+
 }
 button:disabled,
 button[disabled]{

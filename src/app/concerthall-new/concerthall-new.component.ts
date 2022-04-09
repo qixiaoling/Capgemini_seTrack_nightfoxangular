@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {ArtistService} from "../artist.service";
+import {ConcerthallService} from "../concerthall.service";
 import {Location} from "@angular/common";
 
 @Component({
-  selector: 'app-artist-new',
-  templateUrl: './artist-new.component.html',
-  styleUrls: ['./artist-new.component.css'],
+  selector: 'app-concerthall-new',
+  templateUrl: './concerthall-new.component.html',
+  styleUrls: ['./concerthall-new.component.css'],
   styles: [`input.ng-invalid{border-left: 5px solid red;}
     input.ng-valid{border-left: 5px solid green;}`]
 })
-export class ArtistNewComponent implements OnInit {
+export class ConcerthallNewComponent implements OnInit {
 
-  constructor(private artistService: ArtistService,
+  constructor(private concerthallService: ConcerthallService,
               private location: Location) { }
 
   ngOnInit(): void {
   }
   onSubmit(value: any): void{
     console.log(value);
-    this.artistService.addArtist(value)
+    this.concerthallService.addConcerthall(value)
       .subscribe();
     this.goBack();
   }

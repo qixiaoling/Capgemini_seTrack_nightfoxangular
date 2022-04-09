@@ -18,22 +18,22 @@
             <div>{{artist.description}}</div>
           </label>
 
-          <button (click)="goBack()"   type='submit' class='btn'>
-            Go Back
-          </button>
+          <app-review></app-review>
+
+          <div class="btn-wrapper">
+            <button (click)="goBack()"   type='submit' class='btn'>
+              Go Back
+            </button>
+            <button type='submit' class='btn'>
+              <a routerLink="/review-new/{{artist.id}}">
+                Add an comment
+              </a>
+            </button>
+          </div>
 
         </form>
       </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
-      </div>
+
 
     </div>
 

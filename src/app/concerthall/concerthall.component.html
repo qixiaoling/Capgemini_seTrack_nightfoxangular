@@ -1,0 +1,39 @@
+
+<div *ngIf="concerthalls" class='card-section-container'>
+  <div class='card-section-title'>
+    <span class='logan'>AVAILABLE HALLS </span>
+  </div>
+
+
+  <div class="concerts-info-container">
+    <div *ngFor="let concerthall of concerthalls" class="concert-card">
+
+      <p class="card-title">{{concerthall.hallName}}</p>
+      <p>{{concerthall.city}}</p>
+      <p>{{concerthall.phone}}</p>
+      <div class="btn-wrapper">
+        <button class="btn-tiny">
+          <a routerLink="/concerthall-update/{{concerthall.id}}">
+            update
+          </a>
+        </button>
+        <button class="btn-tiny">
+          <a routerLink="/concerthall-delete/{{concerthall.id}}">
+            delete
+          </a>
+        </button>
+      </div>
+      <button class="btn-smaller">
+        <a routerLink="/concerthall-detail/{{concerthall.id}}">
+          details
+        </a>
+      </button>
+    </div>
+  </div>
+  <button class="btn-add">
+    <a routerLink="/concerthall-new">
+      ADD CONCERT HALL
+    </a>
+  </button>
+</div>
+

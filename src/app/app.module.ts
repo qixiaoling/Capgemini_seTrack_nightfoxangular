@@ -20,6 +20,13 @@ import { ArtistComponent } from './artist/artist.component';
 import { ArtistNewComponent } from './artist-new/artist-new.component';
 import { ArtistUpdateComponent } from './artist-update/artist-update.component';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
+import { ConcerthallComponent } from './concerthall/concerthall.component';
+import { ConcerthallUpdateComponent } from './concerthall-update/concerthall-update.component';
+import { ConcerthallDetailComponent } from './concerthall-detail/concerthall-detail.component';
+import { ConcerthallNewComponent } from './concerthall-new/concerthall-new.component';
+import { ReviewComponent } from './review/review.component';
+import { ReviewUpdateComponent } from './review-update/review-update.component';
+import { ReviewNewComponent } from './review-new/review-new.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,14 @@ import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
     ArtistComponent,
     ArtistNewComponent,
     ArtistUpdateComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    ConcerthallComponent,
+    ConcerthallUpdateComponent,
+    ConcerthallDetailComponent,
+    ConcerthallNewComponent,
+    ReviewComponent,
+    ReviewUpdateComponent,
+    ReviewNewComponent
   ],
   imports: [
     BrowserModule,

@@ -71,6 +71,12 @@ label > textarea  {
   font-size: 1rem;
   cursor: pointer;
 }
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /*contact-body-right*/
 .contact-body-right {
   margin-top: 5rem;
@@ -105,7 +111,10 @@ button[disabled]{
   background-color: #cccccc;
   color: #666666;
 }
-
+.btn a{
+  color: #FFC812;
+  text-decoration: none;
+}
 @media (min-width: 880px) {
   .contact-body {
     width: 100%;

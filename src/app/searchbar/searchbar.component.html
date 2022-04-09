@@ -1,15 +1,11 @@
 <div class='searchbar-container'>
 
-  <form>
-    <label htmlFor='search-bar'>
-      <input
-        id='search-bar'
-        type='text'
-        placeholder='enter artist name'
-      />
+  <form #searchForm=ngForm (ngSubmit)="onSubmit(searchForm.value)" novalidate>
+    <label >
+      <input  type='text' ngModel name="bandName" />
     </label>
-    <button class='search-btn' type='button' >
-      <i class="search-icon">🔍︎</i>
+    <button class='search-btn' type="submit" >
+        <i class="search-icon">🔍︎</i>
     </button>
 
   </form>
