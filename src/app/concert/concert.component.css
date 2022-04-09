@@ -1,24 +1,58 @@
-.card-section-container {
-  width: 100vw;
-  height:92vh;
-  background: url('../../Assets/Images/home-page-background.jpg');
-  background-size: cover;
-  background-position: center;
+.concert-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFC812;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
 }
-.card-section-title{
-  width: 80%;
+
+.concert-title-fade-up{
+  width: 100%;
   margin: 2rem auto;
   text-align: center;
+
 }
-.logan {
-  font-size: 5rem;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  color: #FFC812;
+.fade-up-text {
+  font-size: 10rem;
+  font-weight: 700;
+  color:#cccccc;
+  margin: 0;
+}
+.container-title-focus-wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+  position: absolute;
+  top: 1px;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container-title-focus {
+  width: 100%;
+  position: relative;
+  height: auto;
+  flex-wrap: nowrap;
+}
+.focus-title-text {
+  margin-bottom: 0.7rem;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #666666;
+  text-transform: uppercase ;
+}
+.underline{
+  width: 80px;
+  height: 5px;
+  background-color: #666666;
+  position: absolute;
+  top: 4em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .concerts-info-container{
   width: 65%;
