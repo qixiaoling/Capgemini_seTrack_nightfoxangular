@@ -62,7 +62,7 @@
 }
 .concerts-info-container{
   width: 65%;
-  margin: 2rem auto;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2rem;

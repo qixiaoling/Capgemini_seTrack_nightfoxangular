@@ -50,27 +50,55 @@
 
 
   }
-.btn-basic {
-  background-color: #000;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0.75rem 2.25rem;
-  transition: all 0.3s linear;
-  margin-bottom: 2rem;
-  border-radius: 5px;
 
-}
-
-.btn-basic a {
+.btn-add-home {
+  display: block;
+  width: 170px;
+  line-height: 50px;
+  background-color: #262626;
+  text-align: center;
+  position: relative;
   text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
   color: #FFC812;
 }
-.btn-basic:hover {
-  background-color: #FFC812;
-  color: #000;
+
+.btn-add-home:before,
+.btn-add-home:after {
+  content: "";
+  position: absolute;
+  transition: all 0.25s;
 }
-.btn-basic:hover a {
-  background-color: #FFC812;
-  color: #000;
+.btn-add-home:before {
+  border-bottom: 4px solid #262626;
+  border-left: 4px solid #262626;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
 }
+.btn-add-home:after {
+  border-top: 4px solid #262626;
+  border-right: 4px solid #262626;
+  width: 10%;
+  height: 33%;
+  right: -10px;
+  top: -10px;
+}
+.btn-add-home:hover{
+  cursor: pointer;
+}
+.btn-add-home:hover:before,
+.btn-add-home:hover:after {
+  width: 108%;
+  height: 132%;
+}
+
+
+
 
