@@ -3,10 +3,12 @@
 
   <div  *ngIf="reviews[indexArray]" class='review-container '>
     <div className='review-title'>
-      <h2>OUR FANS SAID</h2>
+      <p class="review-content">Feedback from our valued fans</p>
     </div>
     <div class="review-body">
+      <p class="review-text">{{reviews[indexArray].description}}</p>
       <p class="review-name">{{reviews[indexArray].nameReviewer}}</p>
+      <p class="review-text">{{reviews[indexArray].like ? 'Will Recommend': 'Never Recommend'}}</p>
       <div class="review-btn-container">
         <button class="btn-tiny">
           <a routerLink="/review-update/{{reviews[indexArray].id}}">
@@ -19,16 +21,15 @@
           </a>
         </button>
       </div>
-      <p class="review-text">{{reviews[indexArray].description}}</p>
-      <p>{{reviews[indexArray].like ? 'Will Recommend': 'Never Recommend'}}</p>
-      <div class="review-btn-container">
-        <button class="prev-btn" (click)="prevPerson(indexArray)">
-          prev
-        </button>
-        <button class="next-btn" (click)="nextPerson(indexArray)">
-          next
-        </button>
-      </div>
+    </div>
+
+    <div class="review-btn-container">
+      <button class="prev-btn" (click)="prevPerson(indexArray)">
+        prev
+      </button>
+      <button class="next-btn" (click)="nextPerson(indexArray)">
+        next
+      </button>
     </div>
 
   </div>

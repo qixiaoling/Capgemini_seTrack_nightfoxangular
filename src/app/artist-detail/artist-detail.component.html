@@ -1,44 +1,42 @@
-<section *ngIf="artist" class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>VIEW ARTIST DETAILS</h2>
-    </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
-        <form >
-          <label >
-            Band Name
-            <br/>
-            <div>{{artist.bandName}}</div>
-          </label>
+<div *ngIf="artist" class='concert-new-container'>
 
-          <label >
-            Description
-            <br/>
-            <div>{{artist.description}}</div>
-          </label>
+    <div class='crud-container-title'>
+      <p>VIEW ARTIST DETAILS</p>
+    </div>
+
+    <div class='crud-body'>
+
+        <form class="crud-body-form">
+          <div class="form-body">
+            <div class="form-left">
+              <label >
+                Band Name
+                <br/>
+                <div>{{artist.bandName}}</div>
+              </label>
+            </div>
+            <div class="form-right">
+              <label >
+                Description
+                <br/>
+                <div>{{artist.description}}</div>
+              </label>
+            </div>
+          </div>
 
           <app-review></app-review>
-
           <div class="btn-wrapper">
-            <button (click)="goBack()"   type='submit' class='btn'>
+            <button (click)="goBack()"   type='submit' class='btn-cancel'>
               Go Back
             </button>
-            <button type='submit' class='btn'>
+            <button type='submit' class='btn-submit'>
               <a routerLink="/review-new/{{artist.id}}">
                 Add an comment
               </a>
             </button>
           </div>
-
         </form>
       </div>
 
-
-    </div>
-
-  </div>
-
-
-</section>
+</div>
 

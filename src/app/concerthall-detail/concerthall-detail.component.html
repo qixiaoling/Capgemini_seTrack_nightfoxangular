@@ -1,61 +1,66 @@
-<section *ngIf="concerthall" class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>VIEW CONCERT HALL DETAILS</h2>
+<div *ngIf="concerthall" class='concert-new-container'>
+
+    <div class='crud-container-title'>
+      <p>VIEW CONCERT HALL DETAILS</p>
     </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
-        <form >
-          <label >
-            Concert Hall Name
-            <br/>
-            <div>{{concerthall.hallName}}</div>
-          </label>
-          <label >
-            Street
-            <br/>
-            <div>{{concerthall.street}}</div>
-          </label>
-          <label >
-            House Number
-            <br/>
-            <div>{{concerthall.number}}</div>
-          </label>
 
-          <label >
-            City
-            <br/>
-            <div>{{concerthall.city}}</div>
-          </label>
-          <label >
-            Phone Number
-            <br/>
-            <div>{{concerthall.phone}}</div>
-          </label>
+    <div class='crud-body'>
 
-          <label >
-            Capacity
-            <br/>
-            <div>{{concerthall.capacity}}</div>
-          </label>
-          <label >
-            Open Air Option
-            <br/>
-            <div>{{concerthall.openAir}}</div>
-          </label>
+        <form class="crud-body-form">
+          <div class="form-body">
+            <div class="form-left">
+              <label >
+                Concert Hall Name
+                <br/>
+                <div>{{concerthall.hallName}}</div>
+              </label>
+              <label >
+                Street
+                <br/>
+                <div>{{concerthall.street}}</div>
+              </label>
+              <label >
+                House Number
+                <br/>
+                <div>{{concerthall.number}}</div>
+              </label>
+            </div>
+            <div class="form-right">
+              <label >
+                City
+                <br/>
+                <div>{{concerthall.city}}</div>
+              </label>
+              <label >
+                Phone Number
+                <br/>
+                <div>{{concerthall.phone}}</div>
+              </label>
+              <label >
+                Capacity
+                <br/>
+                <div>{{concerthall.capacity}}</div>
+              </label>
+              <label >
+                Open Air Option
+                <br/>
+                <div>{{concerthall.openAir}}</div>
+              </label>
+            </div>
+          </div>
 
-          <button (click)="goBack()"   type='submit' class='btn'>
+          <button (click)="goBack()"   type='submit' class='btn-submit'>
             Go Back
           </button>
 
         </form>
-      </div>
+
 
     </div>
 
-  </div>
 
 
-</section>
+
+</div>
 
 
