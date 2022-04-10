@@ -1,83 +1,79 @@
-<section *ngIf="artist && review" class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>UPDATE REVIEW FOR ARTIST</h2>
-      <h2>{{artist.bandName}}</h2>
+<div *ngIf="artist && review" class='concert-new-container'>
+
+    <div class='crud-container-title'>
+      <p>UPDATE REVIEW FOR {{artist.bandName}}</p>
+
     </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
 
-        <form #reviewForm=ngForm (ngSubmit)="onSubmit(reviewForm.value)" novalidate>
-          <label>
-            Your Name*
-            <br/>
-            <input #reviewNameRef="ngModel" required type='text' name="nameReviewer" [ngModel]="review.nameReviewer " />
-            <!--            pre-filled-->
-            <div [hidden]="reviewNameRef.valid || reviewNameRef.pristine"  class="alert alert-danger">
-              Please enter your name.
-            </div>
-          </label>
+    <div class='crud-body-body'>
 
-          <label >
-            Your Review*
-            <br/>
-            <input #reviewDesRef="ngModel" maxlength="200" required type='text' name="description" [ngModel]="review.description " >
-            <!--            pre-filled-->
-            <div *ngIf="reviewDesRef.errors && (reviewDesRef.dirty || reviewDesRef.touched)"  class="alert alert-danger">
-              <div [hidden]="!reviewDesRef.errors?.['required']">
-                Please enter your comment
-              </div>
-              <div [hidden]=" !reviewDesRef.errors?.['maxlength']">
-                Please enter maximum 200 characters
-              </div>
-            </div>
-          </label>
 
-          <label>
-           Would You*
-            <div>
-              <label class="label-inline">
-                <input #reviewLikeRef="ngModel" type="radio" value="true" name="like" required ngModel>
-                Recommend
+        <form class="crud-body-form" #reviewForm=ngForm (ngSubmit)="onSubmit(reviewForm.value)" novalidate>
+          <div class="form-body">
+            <div class="form-left">
+              <label>
+                Your Name*
+                <br/>
+                <input #reviewNameRef="ngModel" required type='text' name="nameReviewer" [ngModel]="review.nameReviewer " class="form-right-input"/>
+                <!--            pre-filled-->
+                <div [hidden]="reviewNameRef.valid || reviewNameRef.pristine"  class="alert alert-danger">
+                  Please enter your name.
+                </div>
               </label>
-              <label class="label-inline">
-                <input #reviewLikeRef="ngModel" type="radio" value="false" name="like" required ngModel>
-                Never Recommend
+
+              <label >
+                Your Review*
+                <br/>
+                <input #reviewDesRef="ngModel" maxlength="200" required type='text' name="description" [ngModel]="review.description " class="form-right-input">
+                <!--            pre-filled-->
+                <div *ngIf="reviewDesRef.errors && (reviewDesRef.dirty || reviewDesRef.touched)"  class="alert alert-danger">
+                  <div [hidden]="!reviewDesRef.errors?.['required']">
+                    Please enter your comment
+                  </div>
+                  <div [hidden]=" !reviewDesRef.errors?.['maxlength']">
+                    Please enter maximum 200 characters
+                  </div>
+                </div>
               </label>
             </div>
-            <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
-              Please make an choice
+            <div class="form-right">
+              <label>
+                Would You*
+                <div>
+                  <label >
+                    <input #reviewLikeRef="ngModel" type="radio" value="true" name="like" required ngModel>
+                    Recommend
+                  </label>
+                  <label>
+                    <input #reviewLikeRef="ngModel" type="radio" value="false" name="like" required ngModel>
+                    Never Recommend
+                  </label>
+                </div>
+                <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
+                  Please make an choice
+                </div>
+              </label>
             </div>
-          </label>
-
+          </div>
 
           <div class="btn-wrapper">
-            <button [disabled]="!(reviewForm.valid && reviewForm.dirty)"  type='submit' class='btn'>
+            <button [disabled]="!(reviewForm.valid && reviewForm.dirty)"  type='submit' class='btn-submit'>
               Submit
             </button>
-            <button type='submit' class='btn'(click)="goBack()">
+            <button type='submit' class='btn-cancel'(click)="goBack()">
               Cancel
             </button>
           </div>
 
-
         </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
+
       </div>
 
-    </div>
-
-  </div>
 
 
-</section>
+
+
+
+
+</div>
 
