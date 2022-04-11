@@ -27,6 +27,7 @@ import { ConcerthallNewComponent } from './concerthall-new/concerthall-new.compo
 import { ReviewComponent } from './review/review.component';
 import { ReviewUpdateComponent } from './review-update/review-update.component';
 import { ReviewNewComponent } from './review-new/review-new.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ReviewNewComponent } from './review-new/review-new.component';
     ConcerthallNewComponent,
     ReviewComponent,
     ReviewUpdateComponent,
-    ReviewNewComponent
+    ReviewNewComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
