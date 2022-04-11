@@ -54,7 +54,7 @@ export class ConcertService {
   }
 
   deleteConcert(concert: Concert): Observable<Concert> {
-    return this.httpClient.delete<Concert>('http://localhost:8082/concert/delete/' + concert.artist.id + concert.concertHall.id)
+    return this.httpClient.delete<Concert>('http://localhost:8082/concert/delete/' + concert.artist.id + '/' + concert.concertHall.id)
       .pipe();
   }
 }
