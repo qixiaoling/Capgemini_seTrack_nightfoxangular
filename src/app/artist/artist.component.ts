@@ -24,5 +24,9 @@ export class ArtistComponent implements OnInit {
         this.artists = x;
       })
   }
+  deleteArtistById(artist: Artist): void {
+    this.artists = this.artists.filter(a => a !== artist);
+    this.artistService.deleteArtistById(artist.id).subscribe();
+  }
 
 }

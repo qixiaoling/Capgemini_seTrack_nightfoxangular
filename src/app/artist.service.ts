@@ -46,4 +46,8 @@ export class ArtistService {
     return this.httpClient.get<Artist> ('http://localhost:8082/artist/getbyname/' + bandName)
       .pipe();
   }
+  deleteArtistById(id: Number):Observable<Artist>{
+    return this.httpClient.delete<Artist>('http://localhost:8082/artist/delete/' + id)
+      .pipe();
+  }
 }

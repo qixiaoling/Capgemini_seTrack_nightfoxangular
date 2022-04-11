@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
 import {Concerthall} from "./concerthall";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Artist} from "./artist";
 
 
 @Injectable({
@@ -33,6 +34,10 @@ export class ConcerthallService {
   updateConcerthall(concerthall: Concerthall) : Observable<Concerthall> {
     console.log(JSON.stringify(concerthall));
     return this.httpClient.put<Concerthall>('http://localhost:8082/concerthall/update/' + concerthall.id, concerthall, this.httpOptions)
+      .pipe();
+  }
+  deleteConcertHallById(id: Number):Observable<Concerthall>{
+    return this.httpClient.delete<Concerthall>('http://localhost:8082/concerthall/delete/' + id)
       .pipe();
   }
 

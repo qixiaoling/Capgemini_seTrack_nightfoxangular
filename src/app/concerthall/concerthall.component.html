@@ -23,10 +23,8 @@
             update
           </a>
         </button>
-        <button class="btn-tiny">
-          <a routerLink="/concerthall-delete/{{concerthall.id}}">
+        <button class="btn-tiny" (click)="deleteConcertHallById(concerthall)">
             delete
-          </a>
         </button>
       </div>
       <button class="btn-smaller">

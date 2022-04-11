@@ -21,13 +21,11 @@
             update
           </a>
         </button>
-        <button class="btn-tiny">
-          <a routerLink="/artist-delete/{{artist.id}}">
+        <button class="btn-tiny" (click)="deleteArtistById(artist)">
             delete
-          </a>
         </button>
       </div>
-      <button class="btn-smaller">
+      <button class="btn-smaller" >
         <a routerLink="/artist-detail/{{artist.id}}">
           details
         </a>
