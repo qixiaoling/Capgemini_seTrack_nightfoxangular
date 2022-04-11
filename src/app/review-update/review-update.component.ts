@@ -9,7 +9,7 @@ import {ReviewService} from "../review.service";
 @Component({
   selector: 'app-review-update',
   templateUrl: './review-update.component.html',
-  styleUrls: ['./review-update.component.css'],
+  styleUrls: ['../concert-update/concert-update.component.css'],
   styles: [`input.ng-invalid{border-left: 5px solid red;}
     input.ng-valid{border-left: 5px solid green;}`]
 })

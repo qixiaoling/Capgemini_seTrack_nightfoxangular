@@ -1,82 +1,73 @@
-<section *ngIf="concert" class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>UPDATE CONCERT</h2>
+
+  <div *ngIf="concert" class='concert-new-container'>
+
+    <div class='crud-container-title'>
+      <p>UPDATE CONCERT</p>
     </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
 
-        <form #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
+    <div class='crud-body'>
+        <form class="crud-body-form" #concertForm=ngForm (ngSubmit)="onSubmit(concertForm.value)" novalidate>
 
+          <div class="form-body">
+            <div class="form-left">
+              <label >
+                Artist
+                <br/>
+                <div class="form-left-select" >{{concert.artist.bandName}}</div>
+              </label>
 
-          <label >
-            Artist
-            <br/>
-            <div>{{concert.artist.bandName}}</div>
-          </label>
-
-          <label >
-            Concert hall
-            <br/>
-            <div>{{concert.concertHall.hallName}}</div>
-          </label>
-
-
-          <label >
-            Description*
-            <br/>
-            <input #concertDesRef="ngModel" minlength="5" required type='text' name="description" [ngModel]="concert.description" />
-            <div *ngIf="concertDesRef.errors && (concertDesRef.dirty || concertDesRef.touched)"  class="alert alert-danger">
-              <div [hidden]="!concertDesRef.errors?.['required']">
-                Please enter description
-              </div>
-              <div [hidden]=" !concertDesRef.errors?.['minlength']">
-                Please enter at least 5 characters
-              </div>
+              <label >
+                Concert hall
+                <br/>
+                <div class="form-left-select">{{concert.concertHall.hallName}}</div>
+              </label>
             </div>
-          </label>
+            <div class="form-right">
+              <label >
+                Description*
+                <br/>
+                <input #concertDesRef="ngModel" minlength="5" required type='text' name="description" [ngModel]="concert.description" class="form-right-input"/>
+                <div *ngIf="concertDesRef.errors && (concertDesRef.dirty || concertDesRef.touched)"  class="alert alert-danger">
+                  <div [hidden]="!concertDesRef.errors?.['required']">
+                    Please enter description
+                  </div>
+                  <div [hidden]=" !concertDesRef.errors?.['minlength']">
+                    Please enter at least 5 characters
+                  </div>
+                </div>
+              </label>
+              <label >
+                Ticket Price
+                <br/>
+                <input #concertPriceRef="ngModel" required type='text' name="price" [ngModel]="concert.price" class="form-right-input"/>
+                <div [hidden]="concertPriceRef.valid || concertPriceRef.pristine"  class="alert alert-danger">
+                  Please enter ticket price
+                </div>
+              </label>
+              <label>
+                Date *
+                <br/>
+                <input  #concertDateRef="ngModel" required type='text' name='time' [ngModel]="concert.time" class="form-right-input"/>
+                <div [hidden]="concertDateRef.valid || concertDateRef.pristine"  class="alert alert-danger">
+                  Please enter concert date
+                </div>
+              </label>
+            </div>
+          </div>
 
-          <label >
-            Ticket Price
-            <br/>
-            <input #concertPriceRef="ngModel" required type='text' name="price" [ngModel]="concert.price"/>
-            <div [hidden]="concertPriceRef.valid || concertPriceRef.pristine"  class="alert alert-danger">
-              Please enter ticket price
-            </div>
-          </label>
-          <label>
-            Date *
-            <br/>
-            <input  #concertDateRef="ngModel" required type='text' name='time' [ngModel]="concert.time"/>
-            <div [hidden]="concertDateRef.valid || concertDateRef.pristine"  class="alert alert-danger">
-              Please enter concert date
-            </div>
-          </label>
           <div class="btn-wrapper">
-            <button [disabled]="!(concertForm.valid && concertForm.dirty)"  type='submit' class='btn'>
+            <button [disabled]="!(concertForm.valid && concertForm.dirty)"  type='submit' class='btn-submit'>
               Submit
             </button>
-            <button type='submit' class='btn'(click)="goBack()">
+            <button type='submit' class='btn-cancel'(click)="goBack()" >
               Cancel
             </button>
           </div>
 
         </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
-      </div>
-
     </div>
 
   </div>
 
 
-</section>
+

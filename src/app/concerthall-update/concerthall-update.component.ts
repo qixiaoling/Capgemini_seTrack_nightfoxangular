@@ -7,7 +7,7 @@ import {Location} from "@angular/common";
 @Component({
   selector: 'app-concerthall-update',
   templateUrl: './concerthall-update.component.html',
-  styleUrls: ['./concerthall-update.component.css'],
+  styleUrls: ['../concert-update/concert-update.component.css'],
   styles: [`input.ng-invalid{border-left: 5px solid red;}
     input.ng-valid{border-left: 5px solid green;}`]
 })

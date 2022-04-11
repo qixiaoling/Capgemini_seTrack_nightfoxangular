@@ -1,38 +1,40 @@
 <nav class="navbar-container">
   <div class="navbar-content">
     <div class="navbar-header">
-      <a class="logo-link">
+      <a class="logo-link" routerLink="/home">
         <img  class="pony-logo" src="./assets/Images/nightFox_1.PNG" alt="Night fox image"/>
       </a>
       <div class="nav-icon">
-        <button class="hamburger-menu">
+        <button class="hamburger-menu"
+        (click)="toggleLinks()" [disabled]="icon? true: false">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <button class='search-icon'>
+        <button class='search-icon'
+        (click)="toggleIcon()" [disabled]="links? true: false">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
 
     </div>
-    <ul class="navLinks">
+    <ul [className]="changeLinksClasses()">
       <li class="link">
-        <a routerLink="/concerts">
+        <a routerLink="/concerts" (click)="closeMobileMenu()">
           Concerts
         </a>
       </li>
       <li class="link">
-        <a routerLink="/artists">
+        <a routerLink="/artists" (click)="closeMobileMenu()">
           Artist
         </a>
       </li>
       <li class="link">
-        <a routerLink="/concerthalls">
+        <a routerLink="/concerthalls" (click)="closeMobileMenu()">
           Concert halls
         </a>
       </li>
 
     </ul>
-    <div class="iconLinks">
+    <div [className]="changeIconClasses()">
       <app-searchbar></app-searchbar>
     </div>
 

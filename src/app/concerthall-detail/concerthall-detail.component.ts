@@ -7,7 +7,7 @@ import {Location} from "@angular/common";
 @Component({
   selector: 'app-concerthall-detail',
   templateUrl: './concerthall-detail.component.html',
-  styleUrls: ['./concerthall-detail.component.css']
+  styleUrls: ['../concert-detail/concert-detail.component.css']
 })
 export class ConcerthallDetailComponent implements OnInit {
 

@@ -9,7 +9,7 @@ import {ArtistService} from "../artist.service";
 @Component({
   selector: 'app-review-new',
   templateUrl: './review-new.component.html',
-  styleUrls: ['./review-new.component.css'],
+  styleUrls: ['../concert-new/concert-new.component.css'],
   styles: [`input.ng-invalid{border-left: 5px solid red;}
     input.ng-valid{border-left: 5px solid green;}`]
 })

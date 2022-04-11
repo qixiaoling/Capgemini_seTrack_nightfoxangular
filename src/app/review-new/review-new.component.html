@@ -1,78 +1,71 @@
-<section *ngIf="artist" class='contact-section'>
-  <div class='contact-content'>
-    <div class='contact-title-container'>
-      <h2>CREATE REVIEW FOR ARTIST</h2>
-      <h2>{{artist.bandName}}</h2>
+<div *ngIf="artist" class='concert-new-container'>
+
+    <div class='crud-container-title'>
+      <p>REVIEW FOR {{artist.bandName}}</p>
     </div>
-    <div class='contact-body'>
-      <div class='contact-body-left'>
 
-        <form #reviewForm=ngForm (ngSubmit)="onSubmit(reviewForm.value)" novalidate>
+    <div class='crud-body'>
 
+        <form  class="crud-body-form" #reviewForm=ngForm (ngSubmit)="onSubmit(reviewForm.value)" novalidate>
 
-
-          <label>
-            Your Name*
-            <br/>
-            <input #reviewNameRef="ngModel" required type='text' name="nameReviewer" ngModel/>
-            <div [hidden]="reviewNameRef.valid || reviewNameRef.pristine"  class="alert alert-danger">
-              Please enter your name.
-            </div>
-          </label>
-
-          <label >
-            Your Review*
-            <br/>
-            <input #reviewCommentRef="ngModel" maxlength="200" required type='text' name="description" ngModel/>
-            <div *ngIf="reviewCommentRef.errors && (reviewCommentRef.dirty || reviewCommentRef.touched)"  class="alert alert-danger">
-              <div [hidden]="!reviewCommentRef.errors?.['required']">
-                Please enter your comment
-              </div>
-              <div [hidden]=" !reviewCommentRef.errors?.['maxlength']">
-                Please enter maximum 200 characters
-              </div>
-            </div>
-          </label>
-
-          <label>
-            Would You*
-            <div>
-              <label class="label-inline">
-                <input #reviewLikeRef="ngModel" type="radio" value="true" name="like" required ngModel>
-                Recommend
+          <div class="form-body">
+            <div class="form-left">
+              <label>
+                Your Name*
+                <br/>
+                <input #reviewNameRef="ngModel" required type='text' name="nameReviewer" ngModel class="form-right-input"/>
+                <div [hidden]="reviewNameRef.valid || reviewNameRef.pristine"  class="alert alert-danger">
+                  Please enter your name.
+                </div>
               </label>
-              <label class="label-inline">
-                <input #reviewLikeRef="ngModel" type="radio" value="false" name="like" required ngModel>
-                Never Recommend
+
+              <label >
+                Your Review*
+                <br/>
+                <input #reviewCommentRef="ngModel" maxlength="200" required type='text' name="description" ngModel class="form-right-input"/>
+                <div *ngIf="reviewCommentRef.errors && (reviewCommentRef.dirty || reviewCommentRef.touched)"  class="alert alert-danger">
+                  <div [hidden]="!reviewCommentRef.errors?.['required']">
+                    Please enter your comment
+                  </div>
+                  <div [hidden]=" !reviewCommentRef.errors?.['maxlength']">
+                    Please enter maximum 200 characters
+                  </div>
+                </div>
               </label>
             </div>
-            <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
-              Please make an choice
+            <div class="form-right">
+              <label>
+                Would You*
+                <div>
+                  <label class="label-inline">
+                    <input #reviewLikeRef="ngModel" type="radio" value="true" name="like" required ngModel>
+                    Recommend
+                  </label>
+                  <label class="label-inline">
+                    <input #reviewLikeRef="ngModel" type="radio" value="false" name="like" required ngModel>
+                    Never Recommend
+                  </label>
+                </div>
+                <div [hidden]="reviewLikeRef.valid || reviewLikeRef.pristine"  class="alert alert-danger">
+                  Please make an choice
+                </div>
+              </label>
             </div>
-          </label>
+          </div>
 
 
-          <button [disabled]="!reviewForm.form.valid"  type='submit' class='btn'>
+          <button [disabled]="!reviewForm.form.valid"  type='submit' class='btn-submit'>
             Submit
           </button>
 
         </form>
-      </div>
-      <div class='contact-body-right'>
-        <div class='contact-article'>
-          <p class='text-bold'>Artist</p>
-          <p class='text-small'>Visit our Artist page to learn more about our artist.</p>
-        </div>
-        <div class='contact-article'>
-          <p class='text-bold'>Concert Halls</p>
-          <p class='text-small'>Visit our Concert Hall page to learn more about the available concert halls.</p>
-        </div>
-      </div>
+
+
 
     </div>
 
-  </div>
 
 
-</section>
+
+</div>
 

@@ -1,34 +1,75 @@
-.card-section-container {
-  width: 100vw;
-  height:92vh;
-  background: url('../../Assets/Images/home-page-background.jpg');
-  background-size: cover;
-  background-position: center;
+
+.concert-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFC812;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
-.card-section-title{
-  width: 80%;
+
+.concert-title-fade-up{
+  width: 100%;
   margin: 2rem auto;
   text-align: center;
+
+
 }
-.logan {
-  font-size: 5rem;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  color: #FFC812;
+.fade-up-text {
+  width: 100%;
+  letter-spacing: 2.5rem;
+  font-size: 11.5rem;
+  font-weight: 700;
+  color:#cccccc;
+  margin: 0;
+}
+.container-title-focus-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 1px;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  flex-wrap: nowrap;
+}
+.container-title-focus {
+  width: 100%;
+  position: relative;
+  height: auto;
+  flex-wrap: nowrap;
+}
+.focus-title-text {
+  margin-bottom: 0.7rem;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #666666;
+  text-transform: uppercase ;
+}
+.underline{
+  width: 80px;
+  height: 5px;
+  background-color: #666666;
+  position: absolute;
+  top: 4em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .concerts-info-container{
   width: 65%;
-  margin: 2rem auto;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   align-items: center;
   padding: 0 3rem;
+  font-family: 'Work Sans', sans-serif;
 }
 @media (min-width: 768px) {
   .concerts-info-container {
@@ -38,6 +79,10 @@
     grid-row-gap: 2rem;
     align-items: center;
   }
+  .container-title-focus-wrapper {
+    max-width: 70%;
+
+  }
 }
 @media (min-width: 992px) {
   .concerts-info-container {
@@ -45,6 +90,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
     align-items: center;
+  }
+  .container-title-focus-wrapper {
+    max-width: 80%;
+
   }
 }
 
@@ -59,9 +108,8 @@
   text-align: center;
   background: #262626;
   color:#FAB23D;
-  border-radius: 0.25rem;
   padding: 1rem;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Work Sans', sans-serif;
 
 
 }
@@ -81,50 +129,93 @@ card-title {
   margin-bottom: 0.5rem;
 }
 
+
 .btn-smaller,
 .btn-tiny {
-  background-color: #FFC812;
+  background-color: #262626;
   transition: all 0.3s linear;
-  border: none;
-  color: #000;
-}
-.btn-smaller:hover {
-  transform: scale(1.1);
-
-}
-.btn-smaller a,
-.btn-tiny a {
-  text-decoration: none;
-  color: #000;
+  border: 1px solid #FFC812;
+  color: #FFC812;
+  font-weight: 400;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 .btn-smaller {
   width: 100%;
-  font-weight: 700;
-  font-size: 1.5rem;
   padding: 0.115rem 0.5rem;
 }
 .btn-tiny {
-  font-weight: 300;
-  font-size: 1rem;
   padding: 0.115rem 0.5rem;
 }
 
-.btn-add {
-  background-color: #FAB23D;
-  border-radius: 0.25rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 0.75rem 2.25rem;
-  transition: all 0.3s linear;
-  border: none;
-  margin-bottom: 3rem;
+
+.btn-smaller a,
+.btn-tiny a {
+  text-decoration: none;
+  color: #FFC812;
+}
+
+.btn-smaller:hover,
+.btn-tiny:hover {
+  background-color: #FFC812;
+  cursor:pointer;
+
 
 }
-.btn-add:hover {
-  transform: scale(1.1);
-
-}
-.btn-add a {
+.btn-smaller:hover a,
+.btn-tiny:hover a {
   text-decoration: none;
   color: #262626;
 }
+
+
+.btn-add {
+  display: block;
+  width: 170px;
+  line-height: 50px;
+  background-color: #262626;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+  color: #FAB23D;
+}
+
+.btn-add:before,
+.btn-add:after {
+  content: "";
+  position: absolute;
+  transition: all 0.25s;
+}
+.btn-add:before {
+  border-bottom: 4px solid #262626;
+  border-left: 4px solid #262626;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
+}
+.btn-add:after {
+  border-top: 4px solid #262626;
+  border-right: 4px solid #262626;
+  width: 10%;
+  height: 33%;
+  right: -10px;
+  top: -10px;
+}
+.btn-add:hover{
+  cursor: pointer;
+}
+.btn-add:hover:before,
+.btn-add:hover:after {
+  width: 108%;
+  height: 132%;
+}
+
+
