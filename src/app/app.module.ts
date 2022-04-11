@@ -28,6 +28,7 @@ import { ReviewComponent } from './review/review.component';
 import { ReviewUpdateComponent } from './review-update/review-update.component';
 import { ReviewNewComponent } from './review-new/review-new.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ContactComponent } from './contact/contact.component';
     ReviewComponent,
     ReviewUpdateComponent,
     ReviewNewComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
