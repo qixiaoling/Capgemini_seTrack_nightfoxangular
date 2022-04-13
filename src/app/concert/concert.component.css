@@ -74,7 +74,7 @@
 }
 @media (min-width: 768px) {
   .concerts-info-container {
-    width: 65%;
+    width: 85%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;

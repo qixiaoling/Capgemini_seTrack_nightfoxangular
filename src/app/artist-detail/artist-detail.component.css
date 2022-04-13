@@ -31,7 +31,7 @@
 }
 .crud-body-form {
   max-width: 70%;
-  margin: 1rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
