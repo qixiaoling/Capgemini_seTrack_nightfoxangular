@@ -15,6 +15,7 @@ import {ConcerthallNewComponent} from "./concerthall-new/concerthall-new.compone
 import {ConcerthallUpdateComponent} from "./concerthall-update/concerthall-update.component";
 import {ReviewNewComponent} from "./review-new/review-new.component";
 import {ReviewUpdateComponent} from "./review-update/review-update.component";
+import {ContactComponent} from "./contact/contact.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'concerthall-new', component:ConcerthallNewComponent},
   { path: 'concerthall-update/:id', component:ConcerthallUpdateComponent},
   { path: 'review-new/:id', component:ReviewNewComponent},
-  { path: 'review-update/:id', component:ReviewUpdateComponent}
+  { path: 'review-update/:id', component:ReviewUpdateComponent},
+  { path: 'contact', component: ContactComponent}
 
 ];
 

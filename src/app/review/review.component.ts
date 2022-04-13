@@ -56,4 +56,9 @@ export class ReviewComponent implements OnInit {
     return num;
   }
 
+  deleteReview(review: Review) : void {
+    this.reviews = this.reviews.filter(a => a !== review);
+    this.reviewService.deleteReviewById(review.id).subscribe();
+  }
+
 }

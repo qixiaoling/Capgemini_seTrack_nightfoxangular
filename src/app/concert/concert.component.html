@@ -1,11 +1,12 @@
 <div *ngIf="concerts" class='concert-container'>
+
   <div class='container-title-fade-up'>
     <p class='fade-up-text'>CONCERTS</p>
-    <div class="container-title-focus-wrapper">
-      <div class="container-title-focus">
-        <p class="focus-title-text">01 concerts</p>
-        <div class="underline"></div>
-      </div>
+  </div>
+  <div class="container-title-focus-wrapper">
+    <div class="container-title-focus">
+      <p class="focus-title-text">01 concerts</p>
+      <div class="underline"></div>
     </div>
   </div>
 
@@ -19,13 +20,11 @@
       <div class="btn-wrapper">
         <button class="btn-tiny">
           <a routerLink="/concert-update/{{concert.id}}">
-            update
+            <i class="fa-solid fa-pen"></i>
           </a>
         </button>
-        <button class="btn-tiny">
-          <a routerLink="/concert-delete/{{concert.id}}">
-            delete
-          </a>
+        <button class="btn-tiny" (click) = deleteConcert(concert)>
+          <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
       <button class="btn-smaller">

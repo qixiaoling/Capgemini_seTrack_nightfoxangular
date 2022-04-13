@@ -26,4 +26,9 @@ export class ConcertComponent implements OnInit {
     })
 
   }
+
+  deleteConcert(concert:Concert) :void {
+    this.concerts = this.concerts.filter(a => a !== concert);
+    this.concertService.deleteConcert(concert).subscribe();
+  }
 }

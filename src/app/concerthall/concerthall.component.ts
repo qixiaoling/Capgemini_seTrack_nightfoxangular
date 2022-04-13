@@ -24,5 +24,12 @@ export class ConcerthallComponent implements OnInit {
         this.concerthalls = x;
       })
   }
+  deleteConcertHallById(concertHall: Concerthall): void {
+    this.concerthalls = this.concerthalls.filter(a => a !== concertHall);
+    this.concerthallService.deleteConcertHallById(concertHall.id).subscribe();
+  }
+
+
+
 
 }

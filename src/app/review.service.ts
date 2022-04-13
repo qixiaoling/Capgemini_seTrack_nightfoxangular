@@ -42,5 +42,10 @@ export class ReviewService {
 
   }
 
+  deleteReviewById(id:Number): Observable<Review> {
+    return this.httpClient.delete<Review>('http://localhost:8083/review/delete/' + id)
+      .pipe();
+  }
+
 
 }

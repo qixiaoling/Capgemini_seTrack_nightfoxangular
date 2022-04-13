@@ -12,10 +12,8 @@
           update
         </a>
       </button>
-      <button class="btn-tiny">
-        <a routerLink="/review-delete/{{reviews[indexArray].id}}">
+      <button class="btn-tiny" (click)="deleteReview(reviews[indexArray])">
           delete
-        </a>
       </button>
     </div>
   </div>

@@ -18,6 +18,7 @@
   text-align: center;
 
 
+
 }
 .fade-up-text {
   width: 100%;
@@ -31,7 +32,7 @@
   max-width: 80%;
   margin: 0 auto;
   position: absolute;
-  top: 1px;
+  top: 3.5%;
   transform: translateY(-50%);
   left: 50%;
   transform: translateX(-50%);
@@ -56,12 +57,12 @@
   height: 5px;
   background-color: #666666;
   position: absolute;
-  top: 4em;
+  top: 5em;
   left: 50%;
   transform: translateX(-50%);
 }
 .concerts-info-container{
-  width: 65%;
+  width: 85%;
   margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -73,6 +74,7 @@
 }
 @media (min-width: 768px) {
   .concerts-info-container {
+    width: 85%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -83,9 +85,13 @@
     max-width: 70%;
 
   }
+  .container-title-focus-wrapper {
+    top: 10%;
+  }
 }
 @media (min-width: 992px) {
   .concerts-info-container {
+    width: 65%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
@@ -94,6 +100,9 @@
   .container-title-focus-wrapper {
     max-width: 80%;
 
+  }
+  .container-title-focus-wrapper {
+    top: 10%;
   }
 }
 
@@ -160,6 +169,7 @@ card-title {
 .btn-tiny:hover {
   background-color: #FFC812;
   cursor:pointer;
+  color:#262626;
 
 
 }

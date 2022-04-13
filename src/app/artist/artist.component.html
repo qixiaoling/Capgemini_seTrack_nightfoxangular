@@ -18,16 +18,14 @@
       <div class="btn-wrapper">
         <button class="btn-tiny">
           <a routerLink="/artist-update/{{artist.id}}">
-            update
+            <i class="fa-solid fa-pen"></i>
           </a>
         </button>
-        <button class="btn-tiny">
-          <a routerLink="/artist-delete/{{artist.id}}">
-            delete
-          </a>
+        <button class="btn-tiny" (click)="deleteArtistById(artist)">
+          <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
-      <button class="btn-smaller">
+      <button class="btn-smaller" >
         <a routerLink="/artist-detail/{{artist.id}}">
           details
         </a>

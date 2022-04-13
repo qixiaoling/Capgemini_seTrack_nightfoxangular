@@ -5,6 +5,7 @@ import {ConcerthallService} from "../concerthall.service";
 import {Concerthall} from "../concerthall";
 import {ConcertService} from "../concert.service";
 import {Concert} from "../concerts";
+import {Location} from "@angular/common";
 
 
 @Component({
@@ -23,7 +24,8 @@ export class ConcertNewComponent implements OnInit {
 
   constructor(private artistService : ArtistService,
               private concertHallService: ConcerthallService,
-              private concertService: ConcertService) { }
+              private concertService: ConcertService,
+              private location: Location) { }
 
   ngOnInit(): void {
     this.getArtists();
@@ -51,9 +53,13 @@ export class ConcertNewComponent implements OnInit {
     console.log(value);
     this.concertService.addConcert(value)
         .subscribe();
+    this.goBack();
 
     }
 
+  goBack(): void{
+    this.location.back();
+  }
 
 
 
