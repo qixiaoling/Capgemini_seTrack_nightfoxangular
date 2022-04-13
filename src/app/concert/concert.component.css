@@ -169,6 +169,7 @@ card-title {
 .btn-tiny:hover {
   background-color: #FFC812;
   cursor:pointer;
+  color:#262626;
 
 
 }
