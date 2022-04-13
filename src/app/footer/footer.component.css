@@ -20,6 +20,7 @@
 .footer-title h3 {
   flex: 1 0 auto;
   line-height: 1.6;
+  flex-wrap: wrap;
 }
 .unsubscribe {
   margin-top: 1rem;
